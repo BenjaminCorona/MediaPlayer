@@ -24,7 +24,7 @@ namespace MediaPlayer
 
             //progressBar1.ForeColor = Color.Black;
             axWindowsMediaPlayer1.uiMode = "None";
-            trackBar1.Value = 100;
+            macTrackBar1.Value = 99;
 
             if (BtnPlayOrPause.Visible == true)
             {
@@ -42,12 +42,11 @@ namespace MediaPlayer
         }
 
 
-        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        private void macTrackBar1_ValueChanged(object sender, decimal value)
         {
-            axWindowsMediaPlayer1.settings.volume = trackBar1.Value;
-            axWindowsMediaPlayer1.settings.defaultFrame = "https://www.themoviedb.org/t/p/original/41yaWnIT8AjIHiULHtTbKNzZTjc.jpg";
-
+            axWindowsMediaPlayer1.settings.volume = macTrackBar1.Value;
         }
+
 
         private void BtnPlayOrPause_Click(object sender, EventArgs e)
         {
@@ -96,7 +95,7 @@ namespace MediaPlayer
             {
             }
 
-            progressBar1.Maximum = Convert.ToInt32(total);
+            macTrackBarMusic.Maximum = Convert.ToInt32(total);
 
             if (total < 3600)
             {
@@ -114,7 +113,7 @@ namespace MediaPlayer
             if (actual < total)
             {
                 LblActual.Text = formato + axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
-                progressBar1.Value = Convert.ToInt32(axWindowsMediaPlayer1.Ctlcontrols.currentPosition);
+                macTrackBarMusic.Value = Convert.ToInt32(axWindowsMediaPlayer1.Ctlcontrols.currentPosition);
             }
 
         }
@@ -152,9 +151,14 @@ namespace MediaPlayer
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void macTrackBarMusic_ValueChanged(object sender, decimal value)
+        {
+
         }
     }
 }
