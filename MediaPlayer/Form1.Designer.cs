@@ -39,15 +39,16 @@ namespace MediaPlayer
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.LblTotal = new System.Windows.Forms.Label();
             this.panelPlayer = new System.Windows.Forms.Panel();
+            this.macTrackBarMusic = new XComponent.SliderBar.MACTrackBar();
             this.macTrackBar1 = new XComponent.SliderBar.MACTrackBar();
             this.BtnPause = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.BtnInicio = new System.Windows.Forms.Button();
             this.BtnOnline = new System.Windows.Forms.Button();
-            this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnAbrir = new System.Windows.Forms.Button();
-            this.macTrackBarMusic = new XComponent.SliderBar.MACTrackBar();
+            this.BtnInicio = new System.Windows.Forms.Button();
+            this.BtnSalir = new System.Windows.Forms.Button();
+            this.ListCancionesOnline = new System.Windows.Forms.ListBox();
+            this.LblCancionesOnline = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.panelPlayer.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -55,12 +56,13 @@ namespace MediaPlayer
             // 
             // axWindowsMediaPlayer1
             // 
+            this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(224, 45);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
             this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(4);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(573, 388);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(934, 561);
             this.axWindowsMediaPlayer1.TabIndex = 1;
             // 
             // BtnPlayOrPause
@@ -164,6 +166,31 @@ namespace MediaPlayer
             this.panelPlayer.Size = new System.Drawing.Size(934, 72);
             this.panelPlayer.TabIndex = 11;
             // 
+            // macTrackBarMusic
+            // 
+            this.macTrackBarMusic.BackColor = System.Drawing.Color.Transparent;
+            this.macTrackBarMusic.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.macTrackBarMusic.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.macTrackBarMusic.ForeColor = System.Drawing.Color.Gray;
+            this.macTrackBarMusic.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.macTrackBarMusic.IndentHeight = 6;
+            this.macTrackBarMusic.Location = new System.Drawing.Point(15, 36);
+            this.macTrackBarMusic.Maximum = 100;
+            this.macTrackBarMusic.Minimum = 0;
+            this.macTrackBarMusic.Name = "macTrackBarMusic";
+            this.macTrackBarMusic.Size = new System.Drawing.Size(449, 33);
+            this.macTrackBarMusic.TabIndex = 13;
+            this.macTrackBarMusic.TextTickStyle = System.Windows.Forms.TickStyle.None;
+            this.macTrackBarMusic.TickColor = System.Drawing.Color.Transparent;
+            this.macTrackBarMusic.TickHeight = 4;
+            this.macTrackBarMusic.TrackerColor = System.Drawing.Color.Transparent;
+            this.macTrackBarMusic.TrackerSize = new System.Drawing.Size(16, 16);
+            this.macTrackBarMusic.TrackLineColor = System.Drawing.Color.WhiteSmoke;
+            this.macTrackBarMusic.TrackLineHeight = 3;
+            this.macTrackBarMusic.TrackLineSelectedColor = System.Drawing.Color.Silver;
+            this.macTrackBarMusic.Value = 0;
+            this.macTrackBarMusic.MouseDown += new System.Windows.Forms.MouseEventHandler(this.macTrackBarMusic_MouseDown);
+            // 
             // macTrackBar1
             // 
             this.macTrackBar1.BackColor = System.Drawing.Color.Transparent;
@@ -211,6 +238,8 @@ namespace MediaPlayer
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.panel1.Controls.Add(this.LblCancionesOnline);
+            this.panel1.Controls.Add(this.ListCancionesOnline);
             this.panel1.Controls.Add(this.BtnOnline);
             this.panel1.Controls.Add(this.BtnAbrir);
             this.panel1.Controls.Add(this.BtnInicio);
@@ -220,38 +249,6 @@ namespace MediaPlayer
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 489);
             this.panel1.TabIndex = 12;
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.ForeColor = System.Drawing.Color.Silver;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(795, 16);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(139, 464);
-            this.listBox1.TabIndex = 17;
-            // 
-            // BtnInicio
-            // 
-            this.BtnInicio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnInicio.FlatAppearance.BorderSize = 0;
-            this.BtnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnInicio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnInicio.ForeColor = System.Drawing.Color.Silver;
-            this.BtnInicio.Location = new System.Drawing.Point(0, 0);
-            this.BtnInicio.Name = "BtnInicio";
-            this.BtnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnInicio.Size = new System.Drawing.Size(200, 45);
-            this.BtnInicio.TabIndex = 16;
-            this.BtnInicio.Text = "Inicio";
-            this.BtnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnInicio.UseVisualStyleBackColor = true;
             // 
             // BtnOnline
             // 
@@ -271,26 +268,7 @@ namespace MediaPlayer
             this.BtnOnline.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnOnline.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnOnline.UseVisualStyleBackColor = true;
-            // 
-            // BtnSalir
-            // 
-            this.BtnSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BtnSalir.FlatAppearance.BorderSize = 0;
-            this.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSalir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.ForeColor = System.Drawing.Color.Silver;
-            this.BtnSalir.Location = new System.Drawing.Point(0, 444);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnSalir.Size = new System.Drawing.Size(200, 45);
-            this.BtnSalir.TabIndex = 14;
-            this.BtnSalir.Text = "Salir";
-            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnSalir.UseVisualStyleBackColor = true;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            this.BtnOnline.Click += new System.EventHandler(this.BtnOnline_Click);
             // 
             // BtnAbrir
             // 
@@ -312,30 +290,70 @@ namespace MediaPlayer
             this.BtnAbrir.UseVisualStyleBackColor = true;
             this.BtnAbrir.Click += new System.EventHandler(this.BtnAbrir_Click);
             // 
-            // macTrackBarMusic
+            // BtnInicio
             // 
-            this.macTrackBarMusic.BackColor = System.Drawing.Color.Transparent;
-            this.macTrackBarMusic.BorderColor = System.Drawing.SystemColors.ButtonShadow;
-            this.macTrackBarMusic.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.macTrackBarMusic.ForeColor = System.Drawing.Color.Gray;
-            this.macTrackBarMusic.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.macTrackBarMusic.IndentHeight = 6;
-            this.macTrackBarMusic.Location = new System.Drawing.Point(224, 39);
-            this.macTrackBarMusic.Maximum = 100;
-            this.macTrackBarMusic.Minimum = 0;
-            this.macTrackBarMusic.Name = "macTrackBarMusic";
-            this.macTrackBarMusic.Size = new System.Drawing.Size(449, 33);
-            this.macTrackBarMusic.TabIndex = 13;
-            this.macTrackBarMusic.TextTickStyle = System.Windows.Forms.TickStyle.None;
-            this.macTrackBarMusic.TickColor = System.Drawing.Color.Transparent;
-            this.macTrackBarMusic.TickHeight = 4;
-            this.macTrackBarMusic.TrackerColor = System.Drawing.Color.Transparent;
-            this.macTrackBarMusic.TrackerSize = new System.Drawing.Size(16, 16);
-            this.macTrackBarMusic.TrackLineColor = System.Drawing.Color.WhiteSmoke;
-            this.macTrackBarMusic.TrackLineHeight = 3;
-            this.macTrackBarMusic.TrackLineSelectedColor = System.Drawing.Color.Silver;
-            this.macTrackBarMusic.Value = 0;
-            this.macTrackBarMusic.MouseDown += new System.Windows.Forms.MouseEventHandler(this.macTrackBarMusic_MouseDown);
+            this.BtnInicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnInicio.FlatAppearance.BorderSize = 0;
+            this.BtnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnInicio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnInicio.ForeColor = System.Drawing.Color.Silver;
+            this.BtnInicio.Location = new System.Drawing.Point(0, 0);
+            this.BtnInicio.Name = "BtnInicio";
+            this.BtnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnInicio.Size = new System.Drawing.Size(200, 45);
+            this.BtnInicio.TabIndex = 16;
+            this.BtnInicio.Text = "Inicio";
+            this.BtnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnInicio.UseVisualStyleBackColor = true;
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BtnSalir.FlatAppearance.BorderSize = 0;
+            this.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.ForeColor = System.Drawing.Color.Silver;
+            this.BtnSalir.Location = new System.Drawing.Point(0, 444);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnSalir.Size = new System.Drawing.Size(200, 45);
+            this.BtnSalir.TabIndex = 14;
+            this.BtnSalir.Text = "Salir";
+            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
+            // ListCancionesOnline
+            // 
+            this.ListCancionesOnline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.ListCancionesOnline.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListCancionesOnline.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListCancionesOnline.ForeColor = System.Drawing.Color.Silver;
+            this.ListCancionesOnline.FormattingEnabled = true;
+            this.ListCancionesOnline.ItemHeight = 16;
+            this.ListCancionesOnline.Location = new System.Drawing.Point(12, 150);
+            this.ListCancionesOnline.Name = "ListCancionesOnline";
+            this.ListCancionesOnline.Size = new System.Drawing.Size(168, 288);
+            this.ListCancionesOnline.TabIndex = 17;
+            this.ListCancionesOnline.Visible = false;
+            // 
+            // LblCancionesOnline
+            // 
+            this.LblCancionesOnline.AutoSize = true;
+            this.LblCancionesOnline.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCancionesOnline.ForeColor = System.Drawing.SystemColors.Control;
+            this.LblCancionesOnline.Location = new System.Drawing.Point(12, 131);
+            this.LblCancionesOnline.Name = "LblCancionesOnline";
+            this.LblCancionesOnline.Size = new System.Drawing.Size(120, 16);
+            this.LblCancionesOnline.TabIndex = 18;
+            this.LblCancionesOnline.Text = "Canciones Online";
+            this.LblCancionesOnline.Visible = false;
             // 
             // Form1
             // 
@@ -343,7 +361,6 @@ namespace MediaPlayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(934, 561);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelPlayer);
             this.Controls.Add(this.axWindowsMediaPlayer1);
@@ -353,10 +370,12 @@ namespace MediaPlayer
             this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.panelPlayer.ResumeLayout(false);
             this.panelPlayer.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -377,8 +396,9 @@ namespace MediaPlayer
         private System.Windows.Forms.Button BtnInicio;
         private System.Windows.Forms.Button BtnOnline;
         private XComponent.SliderBar.MACTrackBar macTrackBar1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox ListCancionesOnline;
         private XComponent.SliderBar.MACTrackBar macTrackBarMusic;
+        private System.Windows.Forms.Label LblCancionesOnline;
     }
 }
 

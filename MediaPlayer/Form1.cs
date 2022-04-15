@@ -39,6 +39,10 @@ namespace MediaPlayer
             }
 
 
+            //Hacemos responsive los controladores
+            macTrackBarMusic.Location = new Point((panelPlayer.Width - macTrackBarMusic.Width) / 2, macTrackBarMusic.Location.Y);
+
+
         }
 
 
@@ -110,16 +114,21 @@ namespace MediaPlayer
                 //formato = "00:";
             }
 
-            if (!(macTrackBar1.Value >= 100))
+            if (actual <= total)
             {
                 LblActual.Text = formato + axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
                 macTrackBarMusic.Value = Convert.ToInt32(axWindowsMediaPlayer1.Ctlcontrols.currentPosition);
             }
             else
             {
-                macTrackBarMusic.Value = 0;
+                //macTrackBarMusic.Value = 0;
                 LblTotal.Text = "00:00";
                 LblActual.Text = "00:00";
+                ruta = "";
+                BtnPlayOrPause.Enabled = true;
+                BtnBack.Enabled = true;
+                BtnNext.Enabled = true;
+                BtnPause.Enabled = true;
                 timer1.Stop();
             }
 
@@ -168,5 +177,20 @@ namespace MediaPlayer
         {
             axWindowsMediaPlayer1.Ctlcontrols.currentPosition = Convert.ToInt32(macTrackBarMusic.Value);
         }
+
+        private void BtnOnline_Click(object sender, EventArgs e)
+        {
+            if (LblCancionesOnline.Visible == false)
+            {
+                LblCancionesOnline.Visible = true;
+                ListCancionesOnline.Visible = true;
+            }
+            else
+            {
+                LblCancionesOnline.Visible = false;
+                ListCancionesOnline.Visible = false;
+            }
+        }
+
     }
 }
