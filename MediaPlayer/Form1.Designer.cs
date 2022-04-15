@@ -70,9 +70,11 @@ namespace MediaPlayer
             this.LblActual = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.LblTotal = new System.Windows.Forms.Label();
+            this.panelPlayer = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.panelPlayer.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -84,8 +86,9 @@ namespace MediaPlayer
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(851, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(934, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -315,7 +318,8 @@ namespace MediaPlayer
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(219, 52);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(243, 47);
+            this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(426, 362);
@@ -323,57 +327,87 @@ namespace MediaPlayer
             // 
             // BtnPlayOrPause
             // 
-            this.BtnPlayOrPause.Location = new System.Drawing.Point(397, 546);
+            this.BtnPlayOrPause.BackgroundImage = global::MediaPlayer.Properties.Resources.boton_de_play;
+            this.BtnPlayOrPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnPlayOrPause.Enabled = false;
+            this.BtnPlayOrPause.FlatAppearance.BorderSize = 0;
+            this.BtnPlayOrPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.BtnPlayOrPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.BtnPlayOrPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPlayOrPause.ForeColor = System.Drawing.Color.Silver;
+            this.BtnPlayOrPause.Location = new System.Drawing.Point(458, 69);
+            this.BtnPlayOrPause.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnPlayOrPause.Name = "BtnPlayOrPause";
-            this.BtnPlayOrPause.Size = new System.Drawing.Size(75, 23);
+            this.BtnPlayOrPause.Size = new System.Drawing.Size(30, 30);
             this.BtnPlayOrPause.TabIndex = 2;
-            this.BtnPlayOrPause.Text = "Play";
             this.BtnPlayOrPause.UseVisualStyleBackColor = true;
             this.BtnPlayOrPause.Click += new System.EventHandler(this.BtnPlayOrPause_Click);
             // 
             // BtnBack
             // 
-            this.BtnBack.Location = new System.Drawing.Point(316, 546);
+            this.BtnBack.BackgroundImage = global::MediaPlayer.Properties.Resources.atras;
+            this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBack.Enabled = false;
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBack.ForeColor = System.Drawing.Color.Silver;
+            this.BtnBack.Location = new System.Drawing.Point(397, 69);
+            this.BtnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(75, 23);
+            this.BtnBack.Size = new System.Drawing.Size(30, 30);
             this.BtnBack.TabIndex = 3;
-            this.BtnBack.Text = "Back";
             this.BtnBack.UseVisualStyleBackColor = true;
             // 
             // BtnNext
             // 
-            this.BtnNext.Location = new System.Drawing.Point(478, 546);
+            this.BtnNext.BackgroundImage = global::MediaPlayer.Properties.Resources.proximo;
+            this.BtnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnNext.Enabled = false;
+            this.BtnNext.FlatAppearance.BorderSize = 0;
+            this.BtnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.BtnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.BtnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnNext.ForeColor = System.Drawing.Color.Silver;
+            this.BtnNext.Location = new System.Drawing.Point(507, 69);
+            this.BtnNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnNext.Name = "BtnNext";
-            this.BtnNext.Size = new System.Drawing.Size(75, 23);
+            this.BtnNext.Size = new System.Drawing.Size(30, 30);
             this.BtnNext.TabIndex = 4;
-            this.BtnNext.Text = "Next";
             this.BtnNext.UseVisualStyleBackColor = true;
             // 
             // progressBar1
             // 
             this.progressBar1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.progressBar1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.progressBar1.Location = new System.Drawing.Point(126, 575);
+            this.progressBar1.Location = new System.Drawing.Point(69, 103);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(619, 10);
+            this.progressBar1.Size = new System.Drawing.Size(825, 12);
             this.progressBar1.TabIndex = 5;
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(338, 495);
+            this.trackBar1.Location = new System.Drawing.Point(338, 16);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(199, 45);
+            this.trackBar1.Size = new System.Drawing.Size(265, 45);
             this.trackBar1.TabIndex = 8;
+            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar1.Value = 100;
             this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
             // 
             // LblActual
             // 
             this.LblActual.AutoSize = true;
-            this.LblActual.Location = new System.Drawing.Point(123, 559);
+            this.LblActual.BackColor = System.Drawing.SystemColors.Control;
+            this.LblActual.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LblActual.Location = new System.Drawing.Point(65, 83);
+            this.LblActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblActual.Name = "LblActual";
-            this.LblActual.Size = new System.Drawing.Size(34, 13);
+            this.LblActual.Size = new System.Drawing.Size(39, 16);
             this.LblActual.TabIndex = 9;
             this.LblActual.Text = "00:00";
             // 
@@ -385,27 +419,44 @@ namespace MediaPlayer
             // LblTotal
             // 
             this.LblTotal.AutoSize = true;
-            this.LblTotal.Location = new System.Drawing.Point(711, 559);
+            this.LblTotal.BackColor = System.Drawing.SystemColors.Control;
+            this.LblTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LblTotal.Location = new System.Drawing.Point(849, 83);
+            this.LblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(34, 13);
+            this.LblTotal.Size = new System.Drawing.Size(39, 16);
             this.LblTotal.TabIndex = 10;
             this.LblTotal.Text = "00:00";
             // 
+            // panelPlayer
+            // 
+            this.panelPlayer.BackColor = System.Drawing.SystemColors.Control;
+            this.panelPlayer.Controls.Add(this.trackBar1);
+            this.panelPlayer.Controls.Add(this.LblTotal);
+            this.panelPlayer.Controls.Add(this.BtnPlayOrPause);
+            this.panelPlayer.Controls.Add(this.LblActual);
+            this.panelPlayer.Controls.Add(this.BtnBack);
+            this.panelPlayer.Controls.Add(this.BtnNext);
+            this.panelPlayer.Controls.Add(this.progressBar1);
+            this.panelPlayer.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelPlayer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panelPlayer.Location = new System.Drawing.Point(0, 431);
+            this.panelPlayer.Name = "panelPlayer";
+            this.panelPlayer.Size = new System.Drawing.Size(934, 130);
+            this.panelPlayer.TabIndex = 11;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 597);
-            this.Controls.Add(this.LblTotal);
-            this.Controls.Add(this.LblActual);
-            this.Controls.Add(this.trackBar1);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.BtnNext);
-            this.Controls.Add(this.BtnBack);
-            this.Controls.Add(this.BtnPlayOrPause);
+            this.ClientSize = new System.Drawing.Size(934, 561);
+            this.Controls.Add(this.panelPlayer);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -413,6 +464,8 @@ namespace MediaPlayer
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.panelPlayer.ResumeLayout(false);
+            this.panelPlayer.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -459,6 +512,7 @@ namespace MediaPlayer
         private System.Windows.Forms.Label LblActual;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label LblTotal;
+        private System.Windows.Forms.Panel panelPlayer;
     }
 }
 

@@ -54,7 +54,9 @@ namespace MediaPlayer
             try
             {
                 axWindowsMediaPlayer1.URL = ruta;
-
+                BtnPlayOrPause.Enabled = true;
+                BtnBack.Enabled = true;
+                BtnNext.Enabled = true;
                 timer1.Start();
             }
             catch { }
@@ -88,7 +90,14 @@ namespace MediaPlayer
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            total = axWindowsMediaPlayer1.currentMedia.duration;
+            try
+            {
+                total = axWindowsMediaPlayer1.currentMedia.duration;
+            }
+            catch
+            {
+            }
+
             progressBar1.Maximum = Convert.ToInt32(total);
 
             if (total < 3600)
