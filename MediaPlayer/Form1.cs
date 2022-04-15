@@ -41,39 +41,6 @@ namespace MediaPlayer
 
         }
 
-        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            OpenFileDialog cargar = new OpenFileDialog();
-
-            cargar.InitialDirectory = "c:\\";
-            cargar.Title = "Abrir archivo";
-            cargar.DefaultExt = "jpg";
-            cargar.Filter = "WAV (*.wav)|*.wav|MP4 (*.mp4)|*.mp4|MP3 (*.mp3)|*.mp3";
-            cargar.FilterIndex = 4;
-            cargar.RestoreDirectory = true;
-            cargar.ShowDialog();
-            //ruta = "https://file-examples.com/storage/fe31d99e526255e059c5846/2017/04/file_example_MP4_480_1_5MG.mp4";
-            ruta = cargar.FileName;
-            try
-            {
-                if (!(ruta == ""))
-                {
-                    axWindowsMediaPlayer1.URL = ruta;
-                    BtnPlayOrPause.Enabled = true;
-                    BtnBack.Enabled = true;
-                    BtnNext.Enabled = true;
-                    BtnPause.Enabled = true;
-                    BtnPause.Visible = true;
-                    BtnPlayOrPause.Visible = false;
-
-                    timer1.Start();
-                }
-            }
-            catch { }
-
-
-        }
 
         private void trackBar1_ValueChanged(object sender, EventArgs e)
         {
