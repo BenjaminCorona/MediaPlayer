@@ -73,10 +73,10 @@ namespace MediaPlayer
             this.BtnPlayOrPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnPlayOrPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPlayOrPause.ForeColor = System.Drawing.Color.Silver;
-            this.BtnPlayOrPause.Location = new System.Drawing.Point(80, 23);
+            this.BtnPlayOrPause.Location = new System.Drawing.Point(447, 11);
             this.BtnPlayOrPause.Margin = new System.Windows.Forms.Padding(4);
             this.BtnPlayOrPause.Name = "BtnPlayOrPause";
-            this.BtnPlayOrPause.Size = new System.Drawing.Size(30, 30);
+            this.BtnPlayOrPause.Size = new System.Drawing.Size(28, 28);
             this.BtnPlayOrPause.TabIndex = 2;
             this.BtnPlayOrPause.UseVisualStyleBackColor = true;
             this.BtnPlayOrPause.Click += new System.EventHandler(this.BtnPlayOrPause_Click);
@@ -91,10 +91,10 @@ namespace MediaPlayer
             this.BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBack.ForeColor = System.Drawing.Color.Silver;
-            this.BtnBack.Location = new System.Drawing.Point(31, 23);
+            this.BtnBack.Location = new System.Drawing.Point(398, 11);
             this.BtnBack.Margin = new System.Windows.Forms.Padding(4);
             this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(30, 30);
+            this.BtnBack.Size = new System.Drawing.Size(28, 28);
             this.BtnBack.TabIndex = 3;
             this.BtnBack.UseVisualStyleBackColor = true;
             // 
@@ -108,10 +108,10 @@ namespace MediaPlayer
             this.BtnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnNext.ForeColor = System.Drawing.Color.Silver;
-            this.BtnNext.Location = new System.Drawing.Point(127, 23);
+            this.BtnNext.Location = new System.Drawing.Point(494, 11);
             this.BtnNext.Margin = new System.Windows.Forms.Padding(4);
             this.BtnNext.Name = "BtnNext";
-            this.BtnNext.Size = new System.Drawing.Size(30, 30);
+            this.BtnNext.Size = new System.Drawing.Size(28, 28);
             this.BtnNext.TabIndex = 4;
             this.BtnNext.UseVisualStyleBackColor = true;
             // 
@@ -121,7 +121,7 @@ namespace MediaPlayer
             this.LblActual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.LblActual.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblActual.ForeColor = System.Drawing.Color.Silver;
-            this.LblActual.Location = new System.Drawing.Point(195, 37);
+            this.LblActual.Location = new System.Drawing.Point(177, 49);
             this.LblActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblActual.Name = "LblActual";
             this.LblActual.Size = new System.Drawing.Size(40, 16);
@@ -139,7 +139,7 @@ namespace MediaPlayer
             this.LblTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.LblTotal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTotal.ForeColor = System.Drawing.Color.Silver;
-            this.LblTotal.Location = new System.Drawing.Point(698, 37);
+            this.LblTotal.Location = new System.Drawing.Point(680, 49);
             this.LblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTotal.Name = "LblTotal";
             this.LblTotal.Size = new System.Drawing.Size(40, 16);
@@ -181,7 +181,7 @@ namespace MediaPlayer
             this.macTrackBar1.TextTickStyle = System.Windows.Forms.TickStyle.None;
             this.macTrackBar1.TickColor = System.Drawing.Color.Transparent;
             this.macTrackBar1.TickHeight = 4;
-            this.macTrackBar1.TrackerColor = System.Drawing.Color.DimGray;
+            this.macTrackBar1.TrackerColor = System.Drawing.Color.White;
             this.macTrackBar1.TrackerSize = new System.Drawing.Size(16, 16);
             this.macTrackBar1.TrackLineColor = System.Drawing.Color.WhiteSmoke;
             this.macTrackBar1.TrackLineHeight = 3;
@@ -199,10 +199,10 @@ namespace MediaPlayer
             this.BtnPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPause.ForeColor = System.Drawing.Color.Silver;
-            this.BtnPause.Location = new System.Drawing.Point(80, 23);
+            this.BtnPause.Location = new System.Drawing.Point(447, 11);
             this.BtnPause.Margin = new System.Windows.Forms.Padding(4);
             this.BtnPause.Name = "BtnPause";
-            this.BtnPause.Size = new System.Drawing.Size(30, 30);
+            this.BtnPause.Size = new System.Drawing.Size(28, 28);
             this.BtnPause.TabIndex = 11;
             this.BtnPause.UseVisualStyleBackColor = true;
             this.BtnPause.Visible = false;
@@ -320,7 +320,7 @@ namespace MediaPlayer
             this.macTrackBarMusic.ForeColor = System.Drawing.Color.Gray;
             this.macTrackBarMusic.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.macTrackBarMusic.IndentHeight = 6;
-            this.macTrackBarMusic.Location = new System.Drawing.Point(242, 27);
+            this.macTrackBarMusic.Location = new System.Drawing.Point(224, 39);
             this.macTrackBarMusic.Maximum = 100;
             this.macTrackBarMusic.Minimum = 0;
             this.macTrackBarMusic.Name = "macTrackBarMusic";
@@ -329,13 +329,13 @@ namespace MediaPlayer
             this.macTrackBarMusic.TextTickStyle = System.Windows.Forms.TickStyle.None;
             this.macTrackBarMusic.TickColor = System.Drawing.Color.Transparent;
             this.macTrackBarMusic.TickHeight = 4;
-            this.macTrackBarMusic.TrackerColor = System.Drawing.Color.DimGray;
+            this.macTrackBarMusic.TrackerColor = System.Drawing.Color.Transparent;
             this.macTrackBarMusic.TrackerSize = new System.Drawing.Size(16, 16);
             this.macTrackBarMusic.TrackLineColor = System.Drawing.Color.WhiteSmoke;
             this.macTrackBarMusic.TrackLineHeight = 3;
             this.macTrackBarMusic.TrackLineSelectedColor = System.Drawing.Color.Silver;
             this.macTrackBarMusic.Value = 0;
-            this.macTrackBarMusic.ValueChanged += new XComponent.SliderBar.ValueChangedHandler(this.macTrackBarMusic_ValueChanged);
+            this.macTrackBarMusic.MouseDown += new System.Windows.Forms.MouseEventHandler(this.macTrackBarMusic_MouseDown);
             // 
             // Form1
             // 

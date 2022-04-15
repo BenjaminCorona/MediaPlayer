@@ -110,10 +110,17 @@ namespace MediaPlayer
                 //formato = "00:";
             }
 
-            if (actual < total)
+            if (!(macTrackBar1.Value >= 100))
             {
                 LblActual.Text = formato + axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
                 macTrackBarMusic.Value = Convert.ToInt32(axWindowsMediaPlayer1.Ctlcontrols.currentPosition);
+            }
+            else
+            {
+                macTrackBarMusic.Value = 0;
+                LblTotal.Text = "00:00";
+                LblActual.Text = "00:00";
+                timer1.Stop();
             }
 
         }
@@ -156,9 +163,10 @@ namespace MediaPlayer
             Application.Exit();
         }
 
-        private void macTrackBarMusic_ValueChanged(object sender, decimal value)
-        {
 
+        private void macTrackBarMusic_MouseDown(object sender, MouseEventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.currentPosition = Convert.ToInt32(macTrackBarMusic.Value);
         }
     }
 }
