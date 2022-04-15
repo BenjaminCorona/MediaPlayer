@@ -35,7 +35,6 @@ namespace MediaPlayer
             this.BtnPlayOrPause = new System.Windows.Forms.Button();
             this.BtnBack = new System.Windows.Forms.Button();
             this.BtnNext = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.LblActual = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.LblTotal = new System.Windows.Forms.Label();
@@ -56,13 +55,12 @@ namespace MediaPlayer
             // 
             // axWindowsMediaPlayer1
             // 
-            this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(224, 45);
             this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(4);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(934, 561);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(573, 388);
             this.axWindowsMediaPlayer1.TabIndex = 1;
             // 
             // BtnPlayOrPause
@@ -117,26 +115,16 @@ namespace MediaPlayer
             this.BtnNext.TabIndex = 4;
             this.BtnNext.UseVisualStyleBackColor = true;
             // 
-            // progressBar1
-            // 
-            this.progressBar1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.progressBar1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.progressBar1.Location = new System.Drawing.Point(243, 44);
-            this.progressBar1.Margin = new System.Windows.Forms.Padding(4);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(448, 10);
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBar1.TabIndex = 5;
-            // 
             // LblActual
             // 
             this.LblActual.AutoSize = true;
-            this.LblActual.BackColor = System.Drawing.SystemColors.Control;
-            this.LblActual.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblActual.Location = new System.Drawing.Point(196, 38);
+            this.LblActual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.LblActual.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblActual.ForeColor = System.Drawing.Color.Silver;
+            this.LblActual.Location = new System.Drawing.Point(195, 37);
             this.LblActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblActual.Name = "LblActual";
-            this.LblActual.Size = new System.Drawing.Size(39, 16);
+            this.LblActual.Size = new System.Drawing.Size(40, 16);
             this.LblActual.TabIndex = 9;
             this.LblActual.Text = "00:00";
             // 
@@ -148,18 +136,19 @@ namespace MediaPlayer
             // LblTotal
             // 
             this.LblTotal.AutoSize = true;
-            this.LblTotal.BackColor = System.Drawing.SystemColors.Control;
-            this.LblTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblTotal.Location = new System.Drawing.Point(699, 38);
+            this.LblTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.LblTotal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotal.ForeColor = System.Drawing.Color.Silver;
+            this.LblTotal.Location = new System.Drawing.Point(698, 37);
             this.LblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(39, 16);
+            this.LblTotal.Size = new System.Drawing.Size(40, 16);
             this.LblTotal.TabIndex = 10;
             this.LblTotal.Text = "00:00";
             // 
             // panelPlayer
             // 
-            this.panelPlayer.BackColor = System.Drawing.SystemColors.Control;
+            this.panelPlayer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.panelPlayer.Controls.Add(this.macTrackBarMusic);
             this.panelPlayer.Controls.Add(this.macTrackBar1);
             this.panelPlayer.Controls.Add(this.BtnPause);
@@ -168,7 +157,6 @@ namespace MediaPlayer
             this.panelPlayer.Controls.Add(this.LblTotal);
             this.panelPlayer.Controls.Add(this.BtnPlayOrPause);
             this.panelPlayer.Controls.Add(this.LblActual);
-            this.panelPlayer.Controls.Add(this.progressBar1);
             this.panelPlayer.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelPlayer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panelPlayer.Location = new System.Drawing.Point(0, 489);
@@ -222,12 +210,11 @@ namespace MediaPlayer
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(46)))));
-            this.panel1.Controls.Add(this.listBox1);
-            this.panel1.Controls.Add(this.BtnInicio);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.panel1.Controls.Add(this.BtnOnline);
-            this.panel1.Controls.Add(this.BtnSalir);
             this.panel1.Controls.Add(this.BtnAbrir);
+            this.panel1.Controls.Add(this.BtnInicio);
+            this.panel1.Controls.Add(this.BtnSalir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -236,23 +223,27 @@ namespace MediaPlayer
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.ForeColor = System.Drawing.Color.Silver;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(31, 220);
+            this.listBox1.Location = new System.Drawing.Point(795, 16);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 84);
+            this.listBox1.Size = new System.Drawing.Size(139, 464);
             this.listBox1.TabIndex = 17;
             // 
             // BtnInicio
             // 
             this.BtnInicio.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnInicio.FlatAppearance.BorderSize = 0;
-            this.BtnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.BtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.BtnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnInicio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnInicio.ForeColor = System.Drawing.Color.Silver;
-            this.BtnInicio.Location = new System.Drawing.Point(0, 90);
+            this.BtnInicio.Location = new System.Drawing.Point(0, 0);
             this.BtnInicio.Name = "BtnInicio";
             this.BtnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnInicio.Size = new System.Drawing.Size(200, 45);
@@ -266,12 +257,12 @@ namespace MediaPlayer
             // 
             this.BtnOnline.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnOnline.FlatAppearance.BorderSize = 0;
-            this.BtnOnline.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.BtnOnline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.BtnOnline.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnOnline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.BtnOnline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOnline.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOnline.ForeColor = System.Drawing.Color.Silver;
-            this.BtnOnline.Location = new System.Drawing.Point(0, 45);
+            this.BtnOnline.Location = new System.Drawing.Point(0, 90);
             this.BtnOnline.Name = "BtnOnline";
             this.BtnOnline.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnOnline.Size = new System.Drawing.Size(200, 45);
@@ -285,8 +276,8 @@ namespace MediaPlayer
             // 
             this.BtnSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BtnSalir.FlatAppearance.BorderSize = 0;
-            this.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.ForeColor = System.Drawing.Color.Silver;
@@ -305,12 +296,12 @@ namespace MediaPlayer
             // 
             this.BtnAbrir.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnAbrir.FlatAppearance.BorderSize = 0;
-            this.BtnAbrir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.BtnAbrir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.BtnAbrir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnAbrir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.BtnAbrir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAbrir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAbrir.ForeColor = System.Drawing.Color.Silver;
-            this.BtnAbrir.Location = new System.Drawing.Point(0, 0);
+            this.BtnAbrir.Location = new System.Drawing.Point(0, 45);
             this.BtnAbrir.Name = "BtnAbrir";
             this.BtnAbrir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnAbrir.Size = new System.Drawing.Size(200, 45);
@@ -329,7 +320,7 @@ namespace MediaPlayer
             this.macTrackBarMusic.ForeColor = System.Drawing.Color.Gray;
             this.macTrackBarMusic.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.macTrackBarMusic.IndentHeight = 6;
-            this.macTrackBarMusic.Location = new System.Drawing.Point(242, 4);
+            this.macTrackBarMusic.Location = new System.Drawing.Point(242, 27);
             this.macTrackBarMusic.Maximum = 100;
             this.macTrackBarMusic.Minimum = 0;
             this.macTrackBarMusic.Name = "macTrackBarMusic";
@@ -350,7 +341,9 @@ namespace MediaPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(934, 561);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelPlayer);
             this.Controls.Add(this.axWindowsMediaPlayer1);
@@ -373,7 +366,6 @@ namespace MediaPlayer
         private System.Windows.Forms.Button BtnPlayOrPause;
         private System.Windows.Forms.Button BtnBack;
         private System.Windows.Forms.Button BtnNext;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label LblActual;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label LblTotal;
