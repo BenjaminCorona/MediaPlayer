@@ -71,6 +71,7 @@ namespace MediaPlayer
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.LblTotal = new System.Windows.Forms.Label();
             this.panelPlayer = new System.Windows.Forms.Panel();
+            this.BtnPause = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -331,11 +332,11 @@ namespace MediaPlayer
             this.BtnPlayOrPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnPlayOrPause.Enabled = false;
             this.BtnPlayOrPause.FlatAppearance.BorderSize = 0;
-            this.BtnPlayOrPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.BtnPlayOrPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.BtnPlayOrPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnPlayOrPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnPlayOrPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPlayOrPause.ForeColor = System.Drawing.Color.Silver;
-            this.BtnPlayOrPause.Location = new System.Drawing.Point(458, 69);
+            this.BtnPlayOrPause.Location = new System.Drawing.Point(457, 65);
             this.BtnPlayOrPause.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnPlayOrPause.Name = "BtnPlayOrPause";
             this.BtnPlayOrPause.Size = new System.Drawing.Size(30, 30);
@@ -349,11 +350,11 @@ namespace MediaPlayer
             this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnBack.Enabled = false;
             this.BtnBack.FlatAppearance.BorderSize = 0;
-            this.BtnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.BtnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBack.ForeColor = System.Drawing.Color.Silver;
-            this.BtnBack.Location = new System.Drawing.Point(397, 69);
+            this.BtnBack.Location = new System.Drawing.Point(408, 65);
             this.BtnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Size = new System.Drawing.Size(30, 30);
@@ -366,11 +367,11 @@ namespace MediaPlayer
             this.BtnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnNext.Enabled = false;
             this.BtnNext.FlatAppearance.BorderSize = 0;
-            this.BtnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.BtnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.BtnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnNext.ForeColor = System.Drawing.Color.Silver;
-            this.BtnNext.Location = new System.Drawing.Point(507, 69);
+            this.BtnNext.Location = new System.Drawing.Point(504, 65);
             this.BtnNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnNext.Name = "BtnNext";
             this.BtnNext.Size = new System.Drawing.Size(30, 30);
@@ -379,12 +380,13 @@ namespace MediaPlayer
             // 
             // progressBar1
             // 
-            this.progressBar1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.progressBar1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.progressBar1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.progressBar1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.progressBar1.Location = new System.Drawing.Point(69, 103);
             this.progressBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(825, 12);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 5;
             // 
             // trackBar1
@@ -431,6 +433,7 @@ namespace MediaPlayer
             // panelPlayer
             // 
             this.panelPlayer.BackColor = System.Drawing.SystemColors.Control;
+            this.panelPlayer.Controls.Add(this.BtnPause);
             this.panelPlayer.Controls.Add(this.trackBar1);
             this.panelPlayer.Controls.Add(this.LblTotal);
             this.panelPlayer.Controls.Add(this.BtnPlayOrPause);
@@ -444,6 +447,25 @@ namespace MediaPlayer
             this.panelPlayer.Name = "panelPlayer";
             this.panelPlayer.Size = new System.Drawing.Size(934, 130);
             this.panelPlayer.TabIndex = 11;
+            // 
+            // BtnPause
+            // 
+            this.BtnPause.BackgroundImage = global::MediaPlayer.Properties.Resources.boton_de_pausa;
+            this.BtnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnPause.Enabled = false;
+            this.BtnPause.FlatAppearance.BorderSize = 0;
+            this.BtnPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPause.ForeColor = System.Drawing.Color.Silver;
+            this.BtnPause.Location = new System.Drawing.Point(457, 65);
+            this.BtnPause.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnPause.Name = "BtnPause";
+            this.BtnPause.Size = new System.Drawing.Size(30, 30);
+            this.BtnPause.TabIndex = 11;
+            this.BtnPause.UseVisualStyleBackColor = true;
+            this.BtnPause.Visible = false;
+            this.BtnPause.Click += new System.EventHandler(this.BtnPause_Click);
             // 
             // Form1
             // 
@@ -513,6 +535,7 @@ namespace MediaPlayer
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label LblTotal;
         private System.Windows.Forms.Panel panelPlayer;
+        private System.Windows.Forms.Button BtnPause;
     }
 }
 

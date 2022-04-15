@@ -26,14 +26,18 @@ namespace MediaPlayer
             axWindowsMediaPlayer1.uiMode = "None";
             trackBar1.Value = 100;
 
-            if (BtnPlayOrPause.Text == "Play")
+            if (BtnPlayOrPause.Visible == true)
             {
-                BtnPlayOrPause.Text = "Pause"; //Cambio el texto
+                BtnPlayOrPause.Visible = false;//Cambio el imagen
+                BtnPause.Visible = true;//Cambio el imagen
+
             }
             else //Es Pausa
             {
-                BtnPlayOrPause.Text = "Play"; //Cambio el texto
+                BtnPlayOrPause.Visible = true;//Cambio el imagen
+                BtnPause.Visible = false;//Cambio el imagen
             }
+
 
         }
 
@@ -45,7 +49,7 @@ namespace MediaPlayer
             cargar.InitialDirectory = "c:\\";
             cargar.Title = "Abrir archivo";
             cargar.DefaultExt = "jpg";
-            cargar.Filter = "MP3 (*.mp3)|*.mp3|WAV (*.wav)|*.wav|MP4 (*.mp4)|*.mp4";
+            cargar.Filter = "WAV (*.wav)|*.wav|MP4 (*.mp4)|*.mp4|MP3 (*.mp3)|*.mp3";
             cargar.FilterIndex = 4;
             cargar.RestoreDirectory = true;
             cargar.ShowDialog();
@@ -57,6 +61,7 @@ namespace MediaPlayer
                 BtnPlayOrPause.Enabled = true;
                 BtnBack.Enabled = true;
                 BtnNext.Enabled = true;
+                BtnPause.Enabled = true;
                 timer1.Start();
             }
             catch { }
@@ -74,17 +79,37 @@ namespace MediaPlayer
         private void BtnPlayOrPause_Click(object sender, EventArgs e)
         {
 
-            if (BtnPlayOrPause.Text == "Play")
+            if (BtnPlayOrPause.Visible == true)
             {
                 timer1.Start();
                 axWindowsMediaPlayer1.Ctlcontrols.play();
-                BtnPlayOrPause.Text = "Pause"; //Cambio el texto
+                BtnPlayOrPause.Visible = false;//Cambio el imagen
+                BtnPause.Visible = true;//Cambio el imagen
             }
             else //Es Pausa
             {
                 timer1.Stop();
                 axWindowsMediaPlayer1.Ctlcontrols.pause();
-                BtnPlayOrPause.Text = "Play"; //Cambio el texto
+                BtnPlayOrPause.Visible = true;//Cambio el imagen
+                BtnPause.Visible = false;//Cambio el imagen
+            }
+        }
+
+        private void BtnPause_Click(object sender, EventArgs e)
+        {
+            if (BtnPlayOrPause.Visible == true)
+            {
+                timer1.Start();
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+                BtnPlayOrPause.Visible = false;//Cambio el imagen
+                BtnPause.Visible = true;//Cambio el imagen
+            }
+            else //Es Pausa
+            {
+                timer1.Stop();
+                axWindowsMediaPlayer1.Ctlcontrols.pause();
+                BtnPlayOrPause.Visible = true;//Cambio el imagen
+                BtnPause.Visible = false;//Cambio el imagen
             }
         }
 
@@ -120,5 +145,7 @@ namespace MediaPlayer
             }
 
         }
+
+        
     }
 }
