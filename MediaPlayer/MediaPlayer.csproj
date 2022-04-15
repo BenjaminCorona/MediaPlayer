@@ -127,5 +127,29 @@
   <ItemGroup>
     <None Include="Resources\boton-de-play.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sound-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sound-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-adelante-10-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reproducir-10-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-avance-rápido-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-rebobinar-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pausa-en-círculo-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reproducir-en-círculo-24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -38,9 +38,24 @@ namespace MediaPlayer
                 BtnPause.Visible = false;//Cambio el imagen
             }
 
+            /*
+            if (macTrackBar1.Value > 1)
+            {
+                BtnSonido.Visible = true;
+                BtnSilencio.Visible = true;
+            }
+            else if (macTrackBar1.Value == 0)
+            {
+                BtnSilencio.Visible = true;
+                BtnSonido.Visible = false;
+            }
+            */
+
 
             //Hacemos responsive los controladores
-            macTrackBarMusic.Location = new Point((panelPlayer.Width - macTrackBarMusic.Width) / 2, macTrackBarMusic.Location.Y);
+            macTrackBarMusic.Location = new Point((panel8.Width - macTrackBarMusic.Width) / 2, macTrackBarMusic.Location.Y);
+            LblActual.Location = new Point((panel6.Width - LblActual.Width) / 2, LblActual.Location.Y);
+            LblTotal.Location = new Point((panel7.Width - LblTotal.Width) / 2, LblTotal.Location.Y);
 
 
         }
@@ -48,7 +63,19 @@ namespace MediaPlayer
 
         private void macTrackBar1_ValueChanged(object sender, decimal value)
         {
+
             axWindowsMediaPlayer1.settings.volume = macTrackBar1.Value;
+
+            if (macTrackBar1.Value > 1)
+            {
+                BtnSonido.Visible = true;
+                BtnSilencio.Visible = true;
+            }
+            else if (macTrackBar1.Value == 0)
+            {
+                BtnSilencio.Visible = true;
+                BtnSonido.Visible = false;
+            }
         }
 
 
@@ -192,5 +219,38 @@ namespace MediaPlayer
             }
         }
 
+        private void BtnSonido_Click(object sender, EventArgs e)
+        {
+            BtnSonido.Visible = false;
+            BtnSilencio.Visible = true;
+            macTrackBar1.Value = 0;
+
+        }
+
+        private void BtnSilencio_Click(object sender, EventArgs e)
+        {
+            BtnSilencio.Visible = false;
+            BtnSonido.Visible = true;
+            macTrackBar1.Value = 100;
+
+        }
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            macTrackBarMusic.Location = new Point((panel8.Width - macTrackBarMusic.Width) / 2, macTrackBarMusic.Location.Y);
+            LblActual.Location = new Point((panel6.Width - LblActual.Width) / 2, LblActual.Location.Y);
+            LblTotal.Location = new Point((panel7.Width - LblTotal.Width) / 2, LblTotal.Location.Y);
+
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.currentPosition -= 10;
+        }
+
+        private void BtnNext_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.currentPosition += 10;
+        }
     }
 }
