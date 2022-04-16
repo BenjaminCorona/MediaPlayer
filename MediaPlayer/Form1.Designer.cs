@@ -42,21 +42,21 @@ namespace MediaPlayer
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.BtnSonido = new System.Windows.Forms.Button();
             this.macTrackBar1 = new XComponent.SliderBar.MACTrackBar();
-            this.BtnSilencio = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.BtnPause = new System.Windows.Forms.Button();
-            this.BtnPlayOrPause = new System.Windows.Forms.Button();
-            this.BtnBack = new System.Windows.Forms.Button();
-            this.BtnNext = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LblCancionesOnline = new System.Windows.Forms.Label();
             this.ListCancionesOnline = new System.Windows.Forms.ListBox();
             this.BtnOnline = new System.Windows.Forms.Button();
+            this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnAbrir = new System.Windows.Forms.Button();
             this.BtnInicio = new System.Windows.Forms.Button();
-            this.BtnSalir = new System.Windows.Forms.Button();
+            this.BtnSonido = new System.Windows.Forms.Button();
+            this.BtnSilencio = new System.Windows.Forms.Button();
+            this.BtnPause = new System.Windows.Forms.Button();
+            this.BtnPlayOrPause = new System.Windows.Forms.Button();
+            this.BtnBack = new System.Windows.Forms.Button();
+            this.BtnNext = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.panelPlayer.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -205,24 +205,6 @@ namespace MediaPlayer
             this.panel4.Size = new System.Drawing.Size(146, 66);
             this.panel4.TabIndex = 2;
             // 
-            // BtnSonido
-            // 
-            this.BtnSonido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSonido.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_sound_64;
-            this.BtnSonido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnSonido.FlatAppearance.BorderSize = 0;
-            this.BtnSonido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BtnSonido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnSonido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSonido.ForeColor = System.Drawing.Color.Silver;
-            this.BtnSonido.Location = new System.Drawing.Point(8, 24);
-            this.BtnSonido.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnSonido.Name = "BtnSonido";
-            this.BtnSonido.Size = new System.Drawing.Size(23, 23);
-            this.BtnSonido.TabIndex = 12;
-            this.BtnSonido.UseVisualStyleBackColor = true;
-            this.BtnSonido.Click += new System.EventHandler(this.BtnSonido_Click);
-            // 
             // macTrackBar1
             // 
             this.macTrackBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -249,24 +231,6 @@ namespace MediaPlayer
             this.macTrackBar1.Value = 100;
             this.macTrackBar1.ValueChanged += new XComponent.SliderBar.ValueChangedHandler(this.macTrackBar1_ValueChanged);
             // 
-            // BtnSilencio
-            // 
-            this.BtnSilencio.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_sound_64__1_;
-            this.BtnSilencio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnSilencio.FlatAppearance.BorderSize = 0;
-            this.BtnSilencio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BtnSilencio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnSilencio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSilencio.ForeColor = System.Drawing.Color.Silver;
-            this.BtnSilencio.Location = new System.Drawing.Point(8, 24);
-            this.BtnSilencio.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnSilencio.Name = "BtnSilencio";
-            this.BtnSilencio.Size = new System.Drawing.Size(23, 23);
-            this.BtnSilencio.TabIndex = 13;
-            this.BtnSilencio.UseVisualStyleBackColor = true;
-            this.BtnSilencio.Visible = false;
-            this.BtnSilencio.Click += new System.EventHandler(this.BtnSilencio_Click);
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.BtnPause);
@@ -278,80 +242,6 @@ namespace MediaPlayer
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(177, 66);
             this.panel3.TabIndex = 14;
-            // 
-            // BtnPause
-            // 
-            this.BtnPause.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnPause.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_pausa_en_círculo_24;
-            this.BtnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnPause.Enabled = false;
-            this.BtnPause.FlatAppearance.BorderSize = 0;
-            this.BtnPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BtnPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPause.ForeColor = System.Drawing.Color.Silver;
-            this.BtnPause.Location = new System.Drawing.Point(77, 24);
-            this.BtnPause.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnPause.Name = "BtnPause";
-            this.BtnPause.Size = new System.Drawing.Size(23, 23);
-            this.BtnPause.TabIndex = 11;
-            this.BtnPause.UseVisualStyleBackColor = true;
-            this.BtnPause.Visible = false;
-            this.BtnPause.Click += new System.EventHandler(this.BtnPause_Click);
-            // 
-            // BtnPlayOrPause
-            // 
-            this.BtnPlayOrPause.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_reproducir_en_círculo_24;
-            this.BtnPlayOrPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnPlayOrPause.Enabled = false;
-            this.BtnPlayOrPause.FlatAppearance.BorderSize = 0;
-            this.BtnPlayOrPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BtnPlayOrPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnPlayOrPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPlayOrPause.ForeColor = System.Drawing.Color.Silver;
-            this.BtnPlayOrPause.Location = new System.Drawing.Point(77, 24);
-            this.BtnPlayOrPause.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnPlayOrPause.Name = "BtnPlayOrPause";
-            this.BtnPlayOrPause.Size = new System.Drawing.Size(23, 23);
-            this.BtnPlayOrPause.TabIndex = 2;
-            this.BtnPlayOrPause.UseVisualStyleBackColor = true;
-            this.BtnPlayOrPause.Click += new System.EventHandler(this.BtnPlayOrPause_Click);
-            // 
-            // BtnBack
-            // 
-            this.BtnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnBack.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_reproducir_10_24;
-            this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnBack.FlatAppearance.BorderSize = 0;
-            this.BtnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBack.ForeColor = System.Drawing.Color.Silver;
-            this.BtnBack.Location = new System.Drawing.Point(28, 24);
-            this.BtnBack.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(23, 23);
-            this.BtnBack.TabIndex = 3;
-            this.BtnBack.UseVisualStyleBackColor = true;
-            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
-            // 
-            // BtnNext
-            // 
-            this.BtnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnNext.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_adelante_10_24;
-            this.BtnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnNext.FlatAppearance.BorderSize = 0;
-            this.BtnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BtnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnNext.ForeColor = System.Drawing.Color.Silver;
-            this.BtnNext.Location = new System.Drawing.Point(124, 24);
-            this.BtnNext.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnNext.Name = "BtnNext";
-            this.BtnNext.Size = new System.Drawing.Size(23, 23);
-            this.BtnNext.TabIndex = 4;
-            this.BtnNext.UseVisualStyleBackColor = true;
-            this.BtnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
             // panel1
             // 
@@ -404,55 +294,17 @@ namespace MediaPlayer
             this.BtnOnline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOnline.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOnline.ForeColor = System.Drawing.Color.Silver;
+            this.BtnOnline.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnOnline.Location = new System.Drawing.Point(0, 90);
             this.BtnOnline.Name = "BtnOnline";
             this.BtnOnline.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnOnline.Size = new System.Drawing.Size(200, 45);
             this.BtnOnline.TabIndex = 15;
-            this.BtnOnline.Text = "Online";
+            this.BtnOnline.Text = "  Online";
             this.BtnOnline.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnOnline.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnOnline.UseVisualStyleBackColor = true;
             this.BtnOnline.Click += new System.EventHandler(this.BtnOnline_Click);
-            // 
-            // BtnAbrir
-            // 
-            this.BtnAbrir.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnAbrir.FlatAppearance.BorderSize = 0;
-            this.BtnAbrir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnAbrir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnAbrir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAbrir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAbrir.ForeColor = System.Drawing.Color.Silver;
-            this.BtnAbrir.Location = new System.Drawing.Point(0, 45);
-            this.BtnAbrir.Name = "BtnAbrir";
-            this.BtnAbrir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnAbrir.Size = new System.Drawing.Size(200, 45);
-            this.BtnAbrir.TabIndex = 13;
-            this.BtnAbrir.Text = "Abrir multimedia";
-            this.BtnAbrir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAbrir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnAbrir.UseVisualStyleBackColor = true;
-            this.BtnAbrir.Click += new System.EventHandler(this.BtnAbrir_Click);
-            // 
-            // BtnInicio
-            // 
-            this.BtnInicio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnInicio.FlatAppearance.BorderSize = 0;
-            this.BtnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnInicio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnInicio.ForeColor = System.Drawing.Color.Silver;
-            this.BtnInicio.Location = new System.Drawing.Point(0, 0);
-            this.BtnInicio.Name = "BtnInicio";
-            this.BtnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnInicio.Size = new System.Drawing.Size(200, 45);
-            this.BtnInicio.TabIndex = 16;
-            this.BtnInicio.Text = "Inicio";
-            this.BtnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnInicio.UseVisualStyleBackColor = true;
             // 
             // BtnSalir
             // 
@@ -473,6 +325,151 @@ namespace MediaPlayer
             this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnSalir.UseVisualStyleBackColor = true;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
+            // BtnAbrir
+            // 
+            this.BtnAbrir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnAbrir.FlatAppearance.BorderSize = 0;
+            this.BtnAbrir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnAbrir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnAbrir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAbrir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAbrir.ForeColor = System.Drawing.Color.Silver;
+            this.BtnAbrir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAbrir.Location = new System.Drawing.Point(0, 45);
+            this.BtnAbrir.Name = "BtnAbrir";
+            this.BtnAbrir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnAbrir.Size = new System.Drawing.Size(200, 45);
+            this.BtnAbrir.TabIndex = 13;
+            this.BtnAbrir.Text = " Abrir multimedia";
+            this.BtnAbrir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAbrir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAbrir.UseVisualStyleBackColor = true;
+            this.BtnAbrir.Click += new System.EventHandler(this.BtnAbrir_Click);
+            // 
+            // BtnInicio
+            // 
+            this.BtnInicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnInicio.FlatAppearance.BorderSize = 0;
+            this.BtnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnInicio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnInicio.ForeColor = System.Drawing.Color.Silver;
+            this.BtnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnInicio.Location = new System.Drawing.Point(0, 0);
+            this.BtnInicio.Name = "BtnInicio";
+            this.BtnInicio.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.BtnInicio.Size = new System.Drawing.Size(200, 45);
+            this.BtnInicio.TabIndex = 16;
+            this.BtnInicio.Text = "    Inicio";
+            this.BtnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnInicio.UseVisualStyleBackColor = true;
+            // 
+            // BtnSonido
+            // 
+            this.BtnSonido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSonido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSonido.FlatAppearance.BorderSize = 0;
+            this.BtnSonido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnSonido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnSonido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSonido.ForeColor = System.Drawing.Color.Silver;
+            this.BtnSonido.Location = new System.Drawing.Point(8, 24);
+            this.BtnSonido.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSonido.Name = "BtnSonido";
+            this.BtnSonido.Size = new System.Drawing.Size(23, 23);
+            this.BtnSonido.TabIndex = 12;
+            this.BtnSonido.UseVisualStyleBackColor = true;
+            this.BtnSonido.Click += new System.EventHandler(this.BtnSonido_Click);
+            // 
+            // BtnSilencio
+            // 
+            this.BtnSilencio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSilencio.FlatAppearance.BorderSize = 0;
+            this.BtnSilencio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnSilencio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnSilencio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSilencio.ForeColor = System.Drawing.Color.Silver;
+            this.BtnSilencio.Location = new System.Drawing.Point(8, 24);
+            this.BtnSilencio.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSilencio.Name = "BtnSilencio";
+            this.BtnSilencio.Size = new System.Drawing.Size(23, 23);
+            this.BtnSilencio.TabIndex = 13;
+            this.BtnSilencio.UseVisualStyleBackColor = true;
+            this.BtnSilencio.Visible = false;
+            this.BtnSilencio.Click += new System.EventHandler(this.BtnSilencio_Click);
+            // 
+            // BtnPause
+            // 
+            this.BtnPause.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnPause.Enabled = false;
+            this.BtnPause.FlatAppearance.BorderSize = 0;
+            this.BtnPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPause.ForeColor = System.Drawing.Color.Silver;
+            this.BtnPause.Location = new System.Drawing.Point(77, 24);
+            this.BtnPause.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnPause.Name = "BtnPause";
+            this.BtnPause.Size = new System.Drawing.Size(23, 23);
+            this.BtnPause.TabIndex = 11;
+            this.BtnPause.UseVisualStyleBackColor = true;
+            this.BtnPause.Visible = false;
+            this.BtnPause.Click += new System.EventHandler(this.BtnPause_Click);
+            // 
+            // BtnPlayOrPause
+            // 
+            this.BtnPlayOrPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnPlayOrPause.Enabled = false;
+            this.BtnPlayOrPause.FlatAppearance.BorderSize = 0;
+            this.BtnPlayOrPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnPlayOrPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnPlayOrPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPlayOrPause.ForeColor = System.Drawing.Color.Silver;
+            this.BtnPlayOrPause.Location = new System.Drawing.Point(77, 24);
+            this.BtnPlayOrPause.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnPlayOrPause.Name = "BtnPlayOrPause";
+            this.BtnPlayOrPause.Size = new System.Drawing.Size(23, 23);
+            this.BtnPlayOrPause.TabIndex = 2;
+            this.BtnPlayOrPause.UseVisualStyleBackColor = true;
+            this.BtnPlayOrPause.Click += new System.EventHandler(this.BtnPlayOrPause_Click);
+            // 
+            // BtnBack
+            // 
+            this.BtnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBack.ForeColor = System.Drawing.Color.Silver;
+            this.BtnBack.Location = new System.Drawing.Point(28, 24);
+            this.BtnBack.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(23, 23);
+            this.BtnBack.TabIndex = 3;
+            this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
+            // BtnNext
+            // 
+            this.BtnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnNext.FlatAppearance.BorderSize = 0;
+            this.BtnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnNext.ForeColor = System.Drawing.Color.Silver;
+            this.BtnNext.Location = new System.Drawing.Point(124, 24);
+            this.BtnNext.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnNext.Name = "BtnNext";
+            this.BtnNext.Size = new System.Drawing.Size(23, 23);
+            this.BtnNext.TabIndex = 4;
+            this.BtnNext.UseVisualStyleBackColor = true;
+            this.BtnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
             // Form1
             // 
