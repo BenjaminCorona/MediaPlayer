@@ -153,6 +153,7 @@ namespace MediaPlayer
             this.macTrackBarMusic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.macTrackBarMusic.BackColor = System.Drawing.Color.Transparent;
             this.macTrackBarMusic.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.macTrackBarMusic.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.macTrackBarMusic.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.macTrackBarMusic.ForeColor = System.Drawing.Color.Gray;
             this.macTrackBarMusic.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -199,6 +200,7 @@ namespace MediaPlayer
             this.panel4.Controls.Add(this.BtnSonido);
             this.panel4.Controls.Add(this.macTrackBar1);
             this.panel4.Controls.Add(this.BtnSilencio);
+            this.panel4.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(788, 0);
             this.panel4.Name = "panel4";
@@ -210,6 +212,7 @@ namespace MediaPlayer
             this.BtnSonido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSonido.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_sound_64;
             this.BtnSonido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSonido.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.BtnSonido.FlatAppearance.BorderSize = 0;
             this.BtnSonido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnSonido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -228,6 +231,7 @@ namespace MediaPlayer
             this.macTrackBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.macTrackBar1.BackColor = System.Drawing.Color.Transparent;
             this.macTrackBar1.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.macTrackBar1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.macTrackBar1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.macTrackBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(125)))), ((int)(((byte)(123)))));
             this.macTrackBar1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -253,6 +257,7 @@ namespace MediaPlayer
             // 
             this.BtnSilencio.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_sound_64__1_;
             this.BtnSilencio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSilencio.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.BtnSilencio.FlatAppearance.BorderSize = 0;
             this.BtnSilencio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnSilencio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -284,6 +289,7 @@ namespace MediaPlayer
             this.BtnPause.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnPause.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_pausa_en_círculo_24;
             this.BtnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnPause.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.BtnPause.Enabled = false;
             this.BtnPause.FlatAppearance.BorderSize = 0;
             this.BtnPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -303,6 +309,7 @@ namespace MediaPlayer
             // 
             this.BtnPlayOrPause.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_reproducir_en_círculo_24;
             this.BtnPlayOrPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnPlayOrPause.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.BtnPlayOrPause.Enabled = false;
             this.BtnPlayOrPause.FlatAppearance.BorderSize = 0;
             this.BtnPlayOrPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -322,6 +329,7 @@ namespace MediaPlayer
             this.BtnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnBack.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_reproducir_10_24;
             this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBack.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.BtnBack.FlatAppearance.BorderSize = 0;
             this.BtnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -340,6 +348,7 @@ namespace MediaPlayer
             this.BtnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnNext.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_adelante_10_24;
             this.BtnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnNext.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.BtnNext.FlatAppearance.BorderSize = 0;
             this.BtnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -397,6 +406,7 @@ namespace MediaPlayer
             // 
             // BtnOnline
             // 
+            this.BtnOnline.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.BtnOnline.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnOnline.FlatAppearance.BorderSize = 0;
             this.BtnOnline.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
@@ -419,6 +429,7 @@ namespace MediaPlayer
             // 
             // BtnAbrir
             // 
+            this.BtnAbrir.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.BtnAbrir.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnAbrir.FlatAppearance.BorderSize = 0;
             this.BtnAbrir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
@@ -441,6 +452,7 @@ namespace MediaPlayer
             // 
             // BtnInicio
             // 
+            this.BtnInicio.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.BtnInicio.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnInicio.FlatAppearance.BorderSize = 0;
             this.BtnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
@@ -462,6 +474,7 @@ namespace MediaPlayer
             // 
             // BtnSalir
             // 
+            this.BtnSalir.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.BtnSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BtnSalir.FlatAppearance.BorderSize = 0;
             this.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));

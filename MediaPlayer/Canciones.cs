@@ -33,7 +33,7 @@ namespace MediaPlayer
             string[] Linksongs = new string[]
             {
                 "https://cdn-143.anonfiles.com/18oca5Xax3/79aaf88e-1650081471/Morat%20-%20El%20Embrujo.mp3",
-                "https://cdn-123.anonfiles.com/Z9pca6Xcx1/555b5744-1650081626/Morat%20-%20Mi%20Suerte.mp3",
+                "https://file154.gofile.io/download/23f50641-d995-470f-b721-812ebf4a72e3/Morat%20-%20Mi%20Suerte.mp3",
                 "https://cdn-142.anonfiles.com/b5q6adX8x6/a5d0c029-1650082533/The%20Beatles%20-%20Help!%20(Remastered%202009).mp3",
                 "https://cdn-144.anonfiles.com/L7i6aeX2xe/eaeb7d71-1650081778/Hunter%20Hayes%20-%20Tell%20Me.mp3",
                 "https://cdn-144.anonfiles.com/f608afXfx8/a7cf28cd-1650081964/Kygo_Forever_Yours_with_Avicii_&.mp3",
