@@ -57,6 +57,8 @@ namespace MediaPlayer
             this.BtnAbrir = new System.Windows.Forms.Button();
             this.BtnInicio = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
+            this.ListBLocal = new System.Windows.Forms.ListBox();
+            this.LblCancionesLocales = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.panelPlayer.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -365,6 +367,8 @@ namespace MediaPlayer
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.panel1.Controls.Add(this.LblCancionesLocales);
+            this.panel1.Controls.Add(this.ListBLocal);
             this.panel1.Controls.Add(this.LblCancionesOnline);
             this.panel1.Controls.Add(this.ListCancionesOnline);
             this.panel1.Controls.Add(this.BtnOnline);
@@ -400,7 +404,7 @@ namespace MediaPlayer
             this.ListCancionesOnline.Location = new System.Drawing.Point(12, 165);
             this.ListCancionesOnline.Name = "ListCancionesOnline";
             this.ListCancionesOnline.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ListCancionesOnline.Size = new System.Drawing.Size(168, 288);
+            this.ListCancionesOnline.Size = new System.Drawing.Size(168, 256);
             this.ListCancionesOnline.TabIndex = 17;
             this.ListCancionesOnline.Visible = false;
             this.ListCancionesOnline.SelectedIndexChanged += new System.EventHandler(this.ListCancionesOnline_SelectedIndexChanged);
@@ -472,6 +476,7 @@ namespace MediaPlayer
             this.BtnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnInicio.UseVisualStyleBackColor = true;
+            this.BtnInicio.Click += new System.EventHandler(this.BtnInicio_Click);
             // 
             // BtnSalir
             // 
@@ -494,6 +499,33 @@ namespace MediaPlayer
             this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnSalir.UseVisualStyleBackColor = true;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
+            // ListBLocal
+            // 
+            this.ListBLocal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.ListBLocal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListBLocal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListBLocal.ForeColor = System.Drawing.Color.Silver;
+            this.ListBLocal.FormattingEnabled = true;
+            this.ListBLocal.ItemHeight = 16;
+            this.ListBLocal.Location = new System.Drawing.Point(12, 165);
+            this.ListBLocal.Name = "ListBLocal";
+            this.ListBLocal.Size = new System.Drawing.Size(168, 208);
+            this.ListBLocal.TabIndex = 13;
+            this.ListBLocal.Visible = false;
+            this.ListBLocal.SelectedIndexChanged += new System.EventHandler(this.ListBLocal_SelectedIndexChanged);
+            // 
+            // LblCancionesLocales
+            // 
+            this.LblCancionesLocales.AutoSize = true;
+            this.LblCancionesLocales.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCancionesLocales.ForeColor = System.Drawing.SystemColors.Control;
+            this.LblCancionesLocales.Location = new System.Drawing.Point(12, 146);
+            this.LblCancionesLocales.Name = "LblCancionesLocales";
+            this.LblCancionesLocales.Size = new System.Drawing.Size(127, 16);
+            this.LblCancionesLocales.TabIndex = 19;
+            this.LblCancionesLocales.Text = "Canciones Locales";
+            this.LblCancionesLocales.Visible = false;
             // 
             // Form1
             // 
@@ -555,6 +587,8 @@ namespace MediaPlayer
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button BtnSilencio;
         private System.Windows.Forms.Button BtnSonido;
+        private System.Windows.Forms.ListBox ListBLocal;
+        private System.Windows.Forms.Label LblCancionesLocales;
     }
 }
 

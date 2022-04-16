@@ -17,6 +17,10 @@ namespace MediaPlayer
         private double actual = 0;
         private string formato = "";
 
+        //arrelgos para cargar archivos
+        string[] ArchivosMp3;
+        string[] rutasArchivosMP3;
+
 
         public Form1()
         {
@@ -56,6 +60,14 @@ namespace MediaPlayer
 
         }
 
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            macTrackBarMusic.Location = new Point((panel8.Width - macTrackBarMusic.Width) / 2, macTrackBarMusic.Location.Y);
+            LblActual.Location = new Point((panel6.Width - LblActual.Width) / 2, LblActual.Location.Y);
+            LblTotal.Location = new Point((panel7.Width - LblTotal.Width) / 2, LblTotal.Location.Y);
+
+        }
+
         private void macTrackBar1_ValueChanged(object sender, decimal value)
         {
 
@@ -70,6 +82,86 @@ namespace MediaPlayer
             {
                 BtnSilencio.Visible = true;
                 BtnSonido.Visible = false;
+            }
+        }
+
+        private void macTrackBarMusic_MouseDown(object sender, MouseEventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.currentPosition = Convert.ToInt32(macTrackBarMusic.Value);
+        }
+
+        private void BtnAbrir_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog cargar = new OpenFileDialog();
+
+            cargar.InitialDirectory = "c:\\";
+            cargar.Title = "Abrir archivo";
+            cargar.DefaultExt = "jpg";
+            cargar.Filter = "WAV (*.wav)|*.wav|MP4 (*.mp4)|*.mp4|MP3 (*.mp3)|*.mp3";
+            cargar.FilterIndex = 4;
+            cargar.RestoreDirectory = true;
+            cargar.ShowDialog();
+            //ruta = "https://file-examples.com/storage/fe31d99e526255e059c5846/2017/04/file_example_MP4_480_1_5MG.mp4";
+            ruta = cargar.FileName;
+            try
+            {
+                if (!(ruta == ""))
+                {
+                    axWindowsMediaPlayer1.URL = ruta;
+                    BtnPlayOrPause.Enabled = true;
+                    BtnBack.Enabled = true;
+                    BtnNext.Enabled = true;
+                    BtnPause.Enabled = true;
+                    BtnPause.Visible = true;
+                    BtnPlayOrPause.Visible = false;
+
+                    timer1.Start();
+                }
+            }
+            catch { }
+
+        }
+
+        private void BtnInicio_Click(object sender, EventArgs e)
+        {
+            if (LblCancionesLocales.Visible == false)
+            {
+                LblCancionesLocales.Visible = true;
+                ListBLocal.Visible = true;
+            }
+            else
+            {
+                LblCancionesLocales.Visible = false;
+                ListBLocal.Visible = false;
+            }
+            /*-------------------------------------FUNCION PARA CARGAR UNA CARPETA COMPLETA---------------------------------------*/
+            OpenFileDialog OpenFiles = new OpenFileDialog();
+            OpenFiles.Multiselect = true;
+            if (OpenFiles.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                ArchivosMp3 = OpenFiles.SafeFileNames;
+                rutasArchivosMP3 = OpenFiles.FileNames;
+
+                foreach (var ArchMP3 in ArchivosMp3)
+                {
+                    ListBLocal.Items.Add(ArchMP3);
+                }
+                axWindowsMediaPlayer1.URL = rutasArchivosMP3[0];
+                ListBLocal.SelectedIndex = 0;
+            }
+        }
+
+        private void BtnOnline_Click(object sender, EventArgs e)
+        {
+            if (LblCancionesOnline.Visible == false)
+            {
+                LblCancionesOnline.Visible = true;
+                ListCancionesOnline.Visible = true;
+            }
+            else
+            {
+                LblCancionesOnline.Visible = false;
+                ListCancionesOnline.Visible = false;
             }
         }
 
@@ -108,6 +200,37 @@ namespace MediaPlayer
                 BtnPlayOrPause.Visible = true;//Cambio el imagen
                 BtnPause.Visible = false;//Cambio el imagen
             }
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BtnSonido_Click(object sender, EventArgs e)
+        {
+            BtnSonido.Visible = false;
+            BtnSilencio.Visible = true;
+            macTrackBar1.Value = 0;
+
+        }
+
+        private void BtnSilencio_Click(object sender, EventArgs e)
+        {
+            BtnSilencio.Visible = false;
+            BtnSonido.Visible = true;
+            macTrackBar1.Value = 100;
+
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.currentPosition -= 10;
+        }
+
+        private void BtnNext_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.currentPosition += 10;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -155,97 +278,6 @@ namespace MediaPlayer
 
         }
 
-        private void BtnAbrir_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog cargar = new OpenFileDialog();
-
-            cargar.InitialDirectory = "c:\\";
-            cargar.Title = "Abrir archivo";
-            cargar.DefaultExt = "jpg";
-            cargar.Filter = "WAV (*.wav)|*.wav|MP4 (*.mp4)|*.mp4|MP3 (*.mp3)|*.mp3";
-            cargar.FilterIndex = 4;
-            cargar.RestoreDirectory = true;
-            cargar.ShowDialog();
-            //ruta = "https://file-examples.com/storage/fe31d99e526255e059c5846/2017/04/file_example_MP4_480_1_5MG.mp4";
-            ruta = cargar.FileName;
-            try
-            {
-                if (!(ruta == ""))
-                {
-                    axWindowsMediaPlayer1.URL = ruta;
-                    BtnPlayOrPause.Enabled = true;
-                    BtnBack.Enabled = true;
-                    BtnNext.Enabled = true;
-                    BtnPause.Enabled = true;
-                    BtnPause.Visible = true;
-                    BtnPlayOrPause.Visible = false;
-
-                    timer1.Start();
-                }
-            }
-            catch { }
-
-
-        }
-
-        private void BtnSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void macTrackBarMusic_MouseDown(object sender, MouseEventArgs e)
-        {
-            axWindowsMediaPlayer1.Ctlcontrols.currentPosition = Convert.ToInt32(macTrackBarMusic.Value);
-        }
-
-        private void BtnOnline_Click(object sender, EventArgs e)
-        {
-            if (LblCancionesOnline.Visible == false)
-            {
-                LblCancionesOnline.Visible = true;
-                ListCancionesOnline.Visible = true;
-            }
-            else
-            {
-                LblCancionesOnline.Visible = false;
-                ListCancionesOnline.Visible = false;
-            }
-        }
-
-        private void BtnSonido_Click(object sender, EventArgs e)
-        {
-            BtnSonido.Visible = false;
-            BtnSilencio.Visible = true;
-            macTrackBar1.Value = 0;
-
-        }
-
-        private void BtnSilencio_Click(object sender, EventArgs e)
-        {
-            BtnSilencio.Visible = false;
-            BtnSonido.Visible = true;
-            macTrackBar1.Value = 100;
-
-        }
-
-        private void Form1_SizeChanged(object sender, EventArgs e)
-        {
-            macTrackBarMusic.Location = new Point((panel8.Width - macTrackBarMusic.Width) / 2, macTrackBarMusic.Location.Y);
-            LblActual.Location = new Point((panel6.Width - LblActual.Width) / 2, LblActual.Location.Y);
-            LblTotal.Location = new Point((panel7.Width - LblTotal.Width) / 2, LblTotal.Location.Y);
-
-        }
-
-        private void BtnBack_Click(object sender, EventArgs e)
-        {
-            axWindowsMediaPlayer1.Ctlcontrols.currentPosition -= 10;
-        }
-
-        private void BtnNext_Click(object sender, EventArgs e)
-        {
-            axWindowsMediaPlayer1.Ctlcontrols.currentPosition += 10;
-        }
-
         private void ListCancionesOnline_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selectedI = ListCancionesOnline.SelectedIndex;
@@ -266,6 +298,24 @@ namespace MediaPlayer
                 timer1.Start();
             }
 
+        }
+
+        private void ListBLocal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.URL = rutasArchivosMP3[ListBLocal.SelectedIndex];
+            ruta = rutasArchivosMP3[ListBLocal.SelectedIndex];
+            if (!(ruta == ""))
+            {
+                axWindowsMediaPlayer1.URL = ruta;
+                BtnPlayOrPause.Enabled = true;
+                BtnBack.Enabled = true;
+                BtnNext.Enabled = true;
+                BtnPause.Enabled = true;
+                BtnPause.Visible = true;
+                BtnPlayOrPause.Visible = false;
+
+                timer1.Start();
+            }
         }
     }
 }
