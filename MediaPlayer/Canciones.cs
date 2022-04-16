@@ -32,7 +32,7 @@ namespace MediaPlayer
             {
                 "http://filesfor.epizy.com/songs/Morat%20-%20El%20Embrujo%20-%20Copy.mp3",
                 "http://filesfor.epizy.com/songs/Morat%20-%20Mi%20Suerte.mp3",
-                "https://drive.google.com/file/d/1NUt3LssNOurPCfq8G2bBSEmCSgo0pDAY/view?usp=sharing/NAUTA-Dueña de la Luna.mp3",
+                "https://drive.google.com/file/d/1NUt3LssNOurPCfq8G2bBSEmCSgo0pDAY/view?usp=sharing/",
                 "Wed",
                 "Thu",
                 "Fri",
