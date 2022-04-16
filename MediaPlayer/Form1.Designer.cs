@@ -399,6 +399,7 @@ namespace MediaPlayer
             this.ListCancionesOnline.ItemHeight = 16;
             this.ListCancionesOnline.Location = new System.Drawing.Point(12, 165);
             this.ListCancionesOnline.Name = "ListCancionesOnline";
+            this.ListCancionesOnline.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ListCancionesOnline.Size = new System.Drawing.Size(168, 288);
             this.ListCancionesOnline.TabIndex = 17;
             this.ListCancionesOnline.Visible = false;
