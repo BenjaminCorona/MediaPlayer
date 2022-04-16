@@ -393,6 +393,7 @@ namespace MediaPlayer
             this.ListCancionesOnline.Size = new System.Drawing.Size(168, 288);
             this.ListCancionesOnline.TabIndex = 17;
             this.ListCancionesOnline.Visible = false;
+            this.ListCancionesOnline.SelectedIndexChanged += new System.EventHandler(this.ListCancionesOnline_SelectedIndexChanged);
             // 
             // BtnOnline
             // 

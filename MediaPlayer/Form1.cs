@@ -17,9 +17,19 @@ namespace MediaPlayer
         private double actual = 0;
         private string formato = "";
 
+
         public Form1()
         {
             InitializeComponent();
+
+            //Cargamos las canciones online
+            Canciones ReturnCanciones = new Canciones();
+            int n = 0;
+            for (n = 0; n <= 6; n++)
+            {
+                ListCancionesOnline.Items.Add(ReturnCanciones.Songs(n));
+            }
+
             //Para regresar a lo normal, modificar Application.EnableVisualStyles();
 
             //progressBar1.ForeColor = Color.Black;
@@ -38,20 +48,6 @@ namespace MediaPlayer
                 BtnPause.Visible = false;//Cambio el imagen
             }
 
-            /*
-            if (macTrackBar1.Value > 1)
-            {
-                BtnSonido.Visible = true;
-                BtnSilencio.Visible = true;
-            }
-            else if (macTrackBar1.Value == 0)
-            {
-                BtnSilencio.Visible = true;
-                BtnSonido.Visible = false;
-            }
-            */
-
-
             //Hacemos responsive los controladores
             macTrackBarMusic.Location = new Point((panel8.Width - macTrackBarMusic.Width) / 2, macTrackBarMusic.Location.Y);
             LblActual.Location = new Point((panel6.Width - LblActual.Width) / 2, LblActual.Location.Y);
@@ -59,7 +55,6 @@ namespace MediaPlayer
 
 
         }
-
 
         private void macTrackBar1_ValueChanged(object sender, decimal value)
         {
@@ -77,7 +72,6 @@ namespace MediaPlayer
                 BtnSonido.Visible = false;
             }
         }
-
 
         private void BtnPlayOrPause_Click(object sender, EventArgs e)
         {
@@ -199,7 +193,6 @@ namespace MediaPlayer
             Application.Exit();
         }
 
-
         private void macTrackBarMusic_MouseDown(object sender, MouseEventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.currentPosition = Convert.ToInt32(macTrackBarMusic.Value);
@@ -251,6 +244,28 @@ namespace MediaPlayer
         private void BtnNext_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.currentPosition += 10;
+        }
+
+        private void ListCancionesOnline_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selectedI = ListCancionesOnline.SelectedIndex;
+
+            Canciones SongLink = new Canciones();
+            ruta = SongLink.LinkSongs(selectedI);
+
+            if (!(ruta == ""))
+            {
+                axWindowsMediaPlayer1.URL = ruta;
+                BtnPlayOrPause.Enabled = true;
+                BtnBack.Enabled = true;
+                BtnNext.Enabled = true;
+                BtnPause.Enabled = true;
+                BtnPause.Visible = true;
+                BtnPlayOrPause.Visible = false;
+
+                timer1.Start();
+            }
+
         }
     }
 }
