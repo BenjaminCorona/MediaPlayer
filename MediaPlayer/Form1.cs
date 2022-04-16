@@ -25,7 +25,7 @@ namespace MediaPlayer
             //Cargamos las canciones online
             Canciones ReturnCanciones = new Canciones();
             int n = 0;
-            for (n = 0; n <= 6; n++)
+            for (n = 0; n <= 7; n++)
             {
                 ListCancionesOnline.Items.Add(ReturnCanciones.Songs(n));
             }
