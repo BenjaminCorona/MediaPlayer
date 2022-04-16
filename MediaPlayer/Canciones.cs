@@ -16,7 +16,7 @@ namespace MediaPlayer
                 "Morat - El Embrujo",
                 "Morat - Mi Suerte",
                 "The Beatles - Help! (Remastered 2009)",
-                "c4",
+                "Hunter Hayes - Tell Me",
                 "c5",
                 "c6",
                 "c7"
@@ -32,8 +32,8 @@ namespace MediaPlayer
             {
                 "http://filesfor.epizy.com/songs/Morat%20-%20El%20Embrujo%20-%20Copy.mp3",
                 "http://filesfor.epizy.com/songs/Morat%20-%20Mi%20Suerte.mp3",
-                "https://drive.google.com/file/d/1NUt3LssNOurPCfq8G2bBSEmCSgo0pDAY/view?usp=sharing/",
-                "Wed",
+                "https://cdn-124.anonfiles.com/L7i6aeX2xe/79565073-1650080880/Hunter%20Hayes%20-%20Tell%20Me.mp3",
+                "https://cdn-124.anonfiles.com/L7i6aeX2xe/79565073-1650080880/Hunter%20Hayes%20-%20Tell%20Me.mp3",
                 "Thu",
                 "Fri",
                 "Sat"

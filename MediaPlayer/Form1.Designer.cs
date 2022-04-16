@@ -57,6 +57,7 @@ namespace MediaPlayer
             this.BtnAbrir = new System.Windows.Forms.Button();
             this.BtnInicio = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.panelPlayer.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -66,6 +67,7 @@ namespace MediaPlayer
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // axWindowsMediaPlayer1
@@ -475,12 +477,22 @@ namespace MediaPlayer
             this.BtnSalir.UseVisualStyleBackColor = true;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::MediaPlayer.Properties.Resources._1a394c_cf83569f8f604bd1a66aeeba13f2cc36_mv2;
+            this.pictureBox1.Location = new System.Drawing.Point(345, 118);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(443, 241);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(934, 561);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelPlayer);
@@ -504,6 +516,7 @@ namespace MediaPlayer
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -535,6 +548,7 @@ namespace MediaPlayer
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button BtnSilencio;
         private System.Windows.Forms.Button BtnSonido;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
