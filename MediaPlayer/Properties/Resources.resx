@@ -124,8 +124,8 @@
   <data name="icons8-nube-de-sonido-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-nube-de-sonido-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-casa-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-casa-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2265acf01c14c3d284cbfef23773ff1f4c799220" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2265acf01c14c3d284cbfef23773ff1f4c799220.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -141,6 +141,9 @@
   </data>
   <data name="icons8-adelante-10-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-adelante-10-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-sin-audio-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-sin-audio-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-casa-301" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-casa-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,22 +166,22 @@
   <data name="icons8-descargar-desde-la-nube-301" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-descargar-desde-la-nube-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1a394c_cf83569f8f604bd1a66aeeba13f2cc36_mv2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1a394c_cf83569f8f604bd1a66aeeba13f2cc36_mv2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-pausa-en-círculo-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-pausa-en-círculo-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-avance-rápido-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-avance-rápido-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-pausa-en-círculo-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-pausa-en-círculo-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-casa-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-casa-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="colección" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\colección.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-sin-audio-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-sin-audio-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1a394c_cf83569f8f604bd1a66aeeba13f2cc36_mv2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1a394c_cf83569f8f604bd1a66aeeba13f2cc36_mv2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2265acf01c14c3d284cbfef23773ff1f4c799220" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2265acf01c14c3d284cbfef23773ff1f4c799220.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="278406637_1605516189812606_1230842997278436527_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\278406637_1605516189812606_1230842997278436527_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

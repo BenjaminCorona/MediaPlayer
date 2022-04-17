@@ -16,6 +16,7 @@ namespace MediaPlayer
         private double total = 0;
         private double actual = 0;
         private string formato = "";
+        private string nombreCancion = "";
 
         //arrelgos para cargar archivos
         string[] ArchivosMp3;
@@ -152,6 +153,22 @@ namespace MediaPlayer
 
         private void BtnInicio_Click(object sender, EventArgs e)
         {
+            if (PanelAnuncio.Visible == false)
+            {
+                PanelAnuncio.Visible = true;
+                PanelArtistas.Visible = true;
+                pictureAnuncio.Visible = true;
+            }
+            else
+            {
+                PanelAnuncio.Visible = false;
+                PanelArtistas.Visible = false;
+                pictureAnuncio.Visible = false;
+            }
+
+
+            
+            
         }
 
         private void BtnOnline_Click(object sender, EventArgs e)
@@ -307,6 +324,12 @@ namespace MediaPlayer
         {
             axWindowsMediaPlayer1.URL = rutasArchivosMP3[ListBLocal.SelectedIndex];
             ruta = rutasArchivosMP3[ListBLocal.SelectedIndex];
+
+            //Agregando el nombre de la cancion a la interfaz
+            nombreCancion = rutasArchivosMP3[ListBLocal.SelectedIndex].ToString();
+            LblNombreCanción.Text = nombreCancion;
+
+
             if (!(ruta == ""))
             {
                 axWindowsMediaPlayer1.URL = ruta;

@@ -49,8 +49,8 @@ namespace MediaPlayer
             this.ListBLocal = new System.Windows.Forms.ListBox();
             this.LblCancionesOnline = new System.Windows.Forms.Label();
             this.ListCancionesOnline = new System.Windows.Forms.ListBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.PanelArtistas = new System.Windows.Forms.Panel();
+            this.PanelAnuncio = new System.Windows.Forms.Panel();
             this.BtnOnline = new System.Windows.Forms.Button();
             this.BtnAbrir = new System.Windows.Forms.Button();
             this.BtnInicio = new System.Windows.Forms.Button();
@@ -61,7 +61,9 @@ namespace MediaPlayer
             this.BtnPlayOrPause = new System.Windows.Forms.Button();
             this.BtnBack = new System.Windows.Forms.Button();
             this.BtnNext = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureAnuncio = new System.Windows.Forms.PictureBox();
+            this.LblNombreCanción = new System.Windows.Forms.Label();
+            this.pictureArtista = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.panelPlayer.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -71,8 +73,10 @@ namespace MediaPlayer
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PanelArtistas.SuspendLayout();
+            this.PanelAnuncio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAnuncio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureArtista)).BeginInit();
             this.SuspendLayout();
             // 
             // axWindowsMediaPlayer1
@@ -148,6 +152,7 @@ namespace MediaPlayer
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.panel8.Controls.Add(this.LblNombreCanción);
             this.panel8.Controls.Add(this.macTrackBarMusic);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(140, 0);
@@ -325,26 +330,29 @@ namespace MediaPlayer
             this.ListCancionesOnline.Visible = false;
             this.ListCancionesOnline.SelectedIndexChanged += new System.EventHandler(this.ListCancionesOnline_SelectedIndexChanged);
             // 
-            // panel9
+            // PanelArtistas
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(200, 167);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(734, 367);
-            this.panel9.TabIndex = 14;
+            this.PanelArtistas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.PanelArtistas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelArtistas.Controls.Add(this.pictureArtista);
+            this.PanelArtistas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelArtistas.Location = new System.Drawing.Point(200, 167);
+            this.PanelArtistas.Name = "PanelArtistas";
+            this.PanelArtistas.Size = new System.Drawing.Size(734, 367);
+            this.PanelArtistas.TabIndex = 14;
+            this.PanelArtistas.Visible = false;
             // 
-            // panel2
+            // PanelAnuncio
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(200, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(734, 167);
-            this.panel2.TabIndex = 13;
+            this.PanelAnuncio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.PanelAnuncio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelAnuncio.Controls.Add(this.pictureAnuncio);
+            this.PanelAnuncio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelAnuncio.Location = new System.Drawing.Point(200, 0);
+            this.PanelAnuncio.Name = "PanelAnuncio";
+            this.PanelAnuncio.Size = new System.Drawing.Size(734, 167);
+            this.PanelAnuncio.TabIndex = 13;
+            this.PanelAnuncio.Visible = false;
             // 
             // BtnOnline
             // 
@@ -554,16 +562,38 @@ namespace MediaPlayer
             this.BtnNext.UseVisualStyleBackColor = true;
             this.BtnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
-            // pictureBox1
+            // pictureAnuncio
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox1.Image = global::MediaPlayer.Properties.Resources._2265acf01c14c3d284cbfef23773ff1f4c799220;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(734, 167);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureAnuncio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.pictureAnuncio.Image = global::MediaPlayer.Properties.Resources._2265acf01c14c3d284cbfef23773ff1f4c799220;
+            this.pictureAnuncio.Location = new System.Drawing.Point(0, 0);
+            this.pictureAnuncio.Name = "pictureAnuncio";
+            this.pictureAnuncio.Size = new System.Drawing.Size(734, 167);
+            this.pictureAnuncio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureAnuncio.TabIndex = 0;
+            this.pictureAnuncio.TabStop = false;
+            this.pictureAnuncio.Visible = false;
+            // 
+            // LblNombreCanción
+            // 
+            this.LblNombreCanción.AutoSize = true;
+            this.LblNombreCanción.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombreCanción.ForeColor = System.Drawing.SystemColors.Control;
+            this.LblNombreCanción.Location = new System.Drawing.Point(6, 4);
+            this.LblNombreCanción.Name = "LblNombreCanción";
+            this.LblNombreCanción.Size = new System.Drawing.Size(0, 16);
+            this.LblNombreCanción.TabIndex = 20;
+            // 
+            // pictureArtista
+            // 
+            this.pictureArtista.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureArtista.Image = global::MediaPlayer.Properties.Resources._278406637_1605516189812606_1230842997278436527_n;
+            this.pictureArtista.Location = new System.Drawing.Point(0, 0);
+            this.pictureArtista.Name = "pictureArtista";
+            this.pictureArtista.Size = new System.Drawing.Size(734, 367);
+            this.pictureArtista.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureArtista.TabIndex = 0;
+            this.pictureArtista.TabStop = false;
             // 
             // Form1
             // 
@@ -571,8 +601,8 @@ namespace MediaPlayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(934, 600);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.PanelArtistas);
+            this.Controls.Add(this.PanelAnuncio);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelPlayer);
@@ -590,6 +620,7 @@ namespace MediaPlayer
             this.panelPlayer.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -598,8 +629,10 @@ namespace MediaPlayer
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.PanelArtistas.ResumeLayout(false);
+            this.PanelAnuncio.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAnuncio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureArtista)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -633,9 +666,11 @@ namespace MediaPlayer
         private System.Windows.Forms.Button BtnSonido;
         private System.Windows.Forms.ListBox ListBLocal;
         private System.Windows.Forms.Label LblCancionesLocales;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel PanelAnuncio;
+        private System.Windows.Forms.Panel PanelArtistas;
+        private System.Windows.Forms.PictureBox pictureAnuncio;
+        private System.Windows.Forms.Label LblNombreCanción;
+        private System.Windows.Forms.PictureBox pictureArtista;
     }
 }
 
