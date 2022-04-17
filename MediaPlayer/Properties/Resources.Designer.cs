@@ -73,6 +73,16 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2265acf01c14c3d284cbfef23773ff1f4c799220 {
+            get {
+                object obj = ResourceManager.GetObject("2265acf01c14c3d284cbfef23773ff1f4c799220", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap colección {
             get {
                 object obj = ResourceManager.GetObject("colección", resourceCulture);

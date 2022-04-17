@@ -49,6 +49,8 @@ namespace MediaPlayer
             this.ListBLocal = new System.Windows.Forms.ListBox();
             this.LblCancionesOnline = new System.Windows.Forms.Label();
             this.ListCancionesOnline = new System.Windows.Forms.ListBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.BtnOnline = new System.Windows.Forms.Button();
             this.BtnAbrir = new System.Windows.Forms.Button();
             this.BtnInicio = new System.Windows.Forms.Button();
@@ -59,6 +61,7 @@ namespace MediaPlayer
             this.BtnPlayOrPause = new System.Windows.Forms.Button();
             this.BtnBack = new System.Windows.Forms.Button();
             this.BtnNext = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.panelPlayer.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -68,6 +71,8 @@ namespace MediaPlayer
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // axWindowsMediaPlayer1
@@ -78,7 +83,7 @@ namespace MediaPlayer
             this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(4);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(734, 495);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(734, 534);
             this.axWindowsMediaPlayer1.TabIndex = 1;
             // 
             // LblActual
@@ -123,7 +128,7 @@ namespace MediaPlayer
             this.panelPlayer.Controls.Add(this.panel3);
             this.panelPlayer.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelPlayer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelPlayer.Location = new System.Drawing.Point(0, 495);
+            this.panelPlayer.Location = new System.Drawing.Point(0, 534);
             this.panelPlayer.Name = "panelPlayer";
             this.panelPlayer.Size = new System.Drawing.Size(934, 66);
             this.panelPlayer.TabIndex = 11;
@@ -262,7 +267,7 @@ namespace MediaPlayer
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 495);
+            this.panel1.Size = new System.Drawing.Size(200, 534);
             this.panel1.TabIndex = 12;
             // 
             // LblCancionesLocales
@@ -320,10 +325,32 @@ namespace MediaPlayer
             this.ListCancionesOnline.Visible = false;
             this.ListCancionesOnline.SelectedIndexChanged += new System.EventHandler(this.ListCancionesOnline_SelectedIndexChanged);
             // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(200, 167);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(734, 367);
+            this.panel9.TabIndex = 14;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(200, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(734, 167);
+            this.panel2.TabIndex = 13;
+            // 
             // BtnOnline
             // 
             this.BtnOnline.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.BtnOnline.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnOnline.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BtnOnline.FlatAppearance.BorderSize = 0;
             this.BtnOnline.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.BtnOnline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
@@ -337,7 +364,7 @@ namespace MediaPlayer
             this.BtnOnline.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnOnline.Size = new System.Drawing.Size(200, 45);
             this.BtnOnline.TabIndex = 15;
-            this.BtnOnline.Text = "  Online";
+            this.BtnOnline.Text = " Online";
             this.BtnOnline.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnOnline.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnOnline.UseVisualStyleBackColor = true;
@@ -383,7 +410,7 @@ namespace MediaPlayer
             this.BtnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnInicio.Size = new System.Drawing.Size(200, 45);
             this.BtnInicio.TabIndex = 16;
-            this.BtnInicio.Text = "    Inicio";
+            this.BtnInicio.Text = " Inicio";
             this.BtnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnInicio.UseVisualStyleBackColor = true;
@@ -401,7 +428,7 @@ namespace MediaPlayer
             this.BtnSalir.ForeColor = System.Drawing.Color.Silver;
             this.BtnSalir.Image = global::MediaPlayer.Properties.Resources.exit;
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(0, 450);
+            this.BtnSalir.Location = new System.Drawing.Point(0, 489);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnSalir.Size = new System.Drawing.Size(200, 45);
@@ -527,21 +554,36 @@ namespace MediaPlayer
             this.BtnNext.UseVisualStyleBackColor = true;
             this.BtnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.pictureBox1.Image = global::MediaPlayer.Properties.Resources._2265acf01c14c3d284cbfef23773ff1f4c799220;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(734, 167);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(934, 561);
+            this.ClientSize = new System.Drawing.Size(934, 600);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelPlayer);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "MediaPlayer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
@@ -556,6 +598,8 @@ namespace MediaPlayer
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -589,6 +633,9 @@ namespace MediaPlayer
         private System.Windows.Forms.Button BtnSonido;
         private System.Windows.Forms.ListBox ListBLocal;
         private System.Windows.Forms.Label LblCancionesLocales;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
