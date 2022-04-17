@@ -92,6 +92,34 @@ namespace MediaPlayer
 
         private void BtnAbrir_Click(object sender, EventArgs e)
         {
+            if (LblCancionesLocales.Visible == false)
+            {
+                LblCancionesLocales.Visible = true;
+                ListBLocal.Visible = true;
+            }
+            else
+            {
+                LblCancionesLocales.Visible = false;
+                ListBLocal.Visible = false;
+            }
+
+            /*-------------------------------------FUNCION PARA CARGAR UNA CARPETA COMPLETA---------------------------------------*/
+            OpenFileDialog OpenFiles = new OpenFileDialog();
+            OpenFiles.Multiselect = true;
+            if (OpenFiles.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                ArchivosMp3 = OpenFiles.SafeFileNames;
+                rutasArchivosMP3 = OpenFiles.FileNames;
+
+                foreach (var ArchMP3 in ArchivosMp3)
+                {
+                    ListBLocal.Items.Add(ArchMP3);
+                }
+                axWindowsMediaPlayer1.URL = rutasArchivosMP3[0];
+                ListBLocal.SelectedIndex = 0;
+            }
+
+            /*
             OpenFileDialog cargar = new OpenFileDialog();
 
             cargar.InitialDirectory = "c:\\";
@@ -118,37 +146,12 @@ namespace MediaPlayer
                     timer1.Start();
                 }
             }
-            catch { }
+            catch { }*/
 
         }
 
         private void BtnInicio_Click(object sender, EventArgs e)
         {
-            if (LblCancionesLocales.Visible == false)
-            {
-                LblCancionesLocales.Visible = true;
-                ListBLocal.Visible = true;
-            }
-            else
-            {
-                LblCancionesLocales.Visible = false;
-                ListBLocal.Visible = false;
-            }
-            /*-------------------------------------FUNCION PARA CARGAR UNA CARPETA COMPLETA---------------------------------------*/
-            OpenFileDialog OpenFiles = new OpenFileDialog();
-            OpenFiles.Multiselect = true;
-            if (OpenFiles.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                ArchivosMp3 = OpenFiles.SafeFileNames;
-                rutasArchivosMP3 = OpenFiles.FileNames;
-
-                foreach (var ArchMP3 in ArchivosMp3)
-                {
-                    ListBLocal.Items.Add(ArchMP3);
-                }
-                axWindowsMediaPlayer1.URL = rutasArchivosMP3[0];
-                ListBLocal.SelectedIndex = 0;
-            }
         }
 
         private void BtnOnline_Click(object sender, EventArgs e)

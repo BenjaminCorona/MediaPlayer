@@ -113,6 +113,16 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_biblioteca_de_música_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-biblioteca-de-música-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_casa_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-casa-30", resourceCulture);
@@ -146,6 +156,16 @@ namespace MediaPlayer.Properties {
         internal static System.Drawing.Bitmap icons8_descargar_desde_la_nube_301 {
             get {
                 object obj = ResourceManager.GetObject("icons8-descargar-desde-la-nube-301", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_nube_de_sonido_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-nube-de-sonido-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,6 +213,26 @@ namespace MediaPlayer.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_sin_audio_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sin-audio-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sonido_de_habitaciones_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sonido-de-habitaciones-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_sound_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-sound-64", resourceCulture);
@@ -206,6 +246,16 @@ namespace MediaPlayer.Properties {
         internal static System.Drawing.Bitmap icons8_sound_64__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-sound-64 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sample1 {
+            get {
+                object obj = ResourceManager.GetObject("sample1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

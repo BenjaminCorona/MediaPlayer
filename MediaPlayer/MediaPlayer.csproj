@@ -143,5 +143,20 @@
   <ItemGroup>
     <None Include="Resources\1a394c_cf83569f8f604bd1a66aeeba13f2cc36_mv2.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sin-audio-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sonido-de-habitaciones-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-nube-de-sonido-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-biblioteca-de-música-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sample1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -42,23 +42,23 @@ namespace MediaPlayer
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.BtnSonido = new System.Windows.Forms.Button();
             this.macTrackBar1 = new XComponent.SliderBar.MACTrackBar();
-            this.BtnSilencio = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.BtnPause = new System.Windows.Forms.Button();
-            this.BtnPlayOrPause = new System.Windows.Forms.Button();
-            this.BtnBack = new System.Windows.Forms.Button();
-            this.BtnNext = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LblCancionesLocales = new System.Windows.Forms.Label();
+            this.ListBLocal = new System.Windows.Forms.ListBox();
             this.LblCancionesOnline = new System.Windows.Forms.Label();
             this.ListCancionesOnline = new System.Windows.Forms.ListBox();
             this.BtnOnline = new System.Windows.Forms.Button();
             this.BtnAbrir = new System.Windows.Forms.Button();
             this.BtnInicio = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
-            this.ListBLocal = new System.Windows.Forms.ListBox();
-            this.LblCancionesLocales = new System.Windows.Forms.Label();
+            this.BtnSonido = new System.Windows.Forms.Button();
+            this.BtnSilencio = new System.Windows.Forms.Button();
+            this.BtnPause = new System.Windows.Forms.Button();
+            this.BtnPlayOrPause = new System.Windows.Forms.Button();
+            this.BtnBack = new System.Windows.Forms.Button();
+            this.BtnNext = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.panelPlayer.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -209,25 +209,6 @@ namespace MediaPlayer
             this.panel4.Size = new System.Drawing.Size(146, 66);
             this.panel4.TabIndex = 2;
             // 
-            // BtnSonido
-            // 
-            this.BtnSonido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSonido.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_sound_64;
-            this.BtnSonido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnSonido.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.BtnSonido.FlatAppearance.BorderSize = 0;
-            this.BtnSonido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BtnSonido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnSonido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSonido.ForeColor = System.Drawing.Color.Silver;
-            this.BtnSonido.Location = new System.Drawing.Point(8, 24);
-            this.BtnSonido.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnSonido.Name = "BtnSonido";
-            this.BtnSonido.Size = new System.Drawing.Size(23, 23);
-            this.BtnSonido.TabIndex = 12;
-            this.BtnSonido.UseVisualStyleBackColor = true;
-            this.BtnSonido.Click += new System.EventHandler(this.BtnSonido_Click);
-            // 
             // macTrackBar1
             // 
             this.macTrackBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -255,9 +236,203 @@ namespace MediaPlayer
             this.macTrackBar1.Value = 100;
             this.macTrackBar1.ValueChanged += new XComponent.SliderBar.ValueChangedHandler(this.macTrackBar1_ValueChanged);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.BtnPause);
+            this.panel3.Controls.Add(this.BtnPlayOrPause);
+            this.panel3.Controls.Add(this.BtnBack);
+            this.panel3.Controls.Add(this.BtnNext);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(177, 66);
+            this.panel3.TabIndex = 14;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.panel1.Controls.Add(this.LblCancionesLocales);
+            this.panel1.Controls.Add(this.ListBLocal);
+            this.panel1.Controls.Add(this.LblCancionesOnline);
+            this.panel1.Controls.Add(this.ListCancionesOnline);
+            this.panel1.Controls.Add(this.BtnOnline);
+            this.panel1.Controls.Add(this.BtnAbrir);
+            this.panel1.Controls.Add(this.BtnInicio);
+            this.panel1.Controls.Add(this.BtnSalir);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 495);
+            this.panel1.TabIndex = 12;
+            // 
+            // LblCancionesLocales
+            // 
+            this.LblCancionesLocales.AutoSize = true;
+            this.LblCancionesLocales.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCancionesLocales.ForeColor = System.Drawing.SystemColors.Control;
+            this.LblCancionesLocales.Location = new System.Drawing.Point(12, 146);
+            this.LblCancionesLocales.Name = "LblCancionesLocales";
+            this.LblCancionesLocales.Size = new System.Drawing.Size(127, 16);
+            this.LblCancionesLocales.TabIndex = 19;
+            this.LblCancionesLocales.Text = "Canciones Locales";
+            this.LblCancionesLocales.Visible = false;
+            // 
+            // ListBLocal
+            // 
+            this.ListBLocal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.ListBLocal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListBLocal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListBLocal.ForeColor = System.Drawing.Color.Silver;
+            this.ListBLocal.FormattingEnabled = true;
+            this.ListBLocal.ItemHeight = 16;
+            this.ListBLocal.Location = new System.Drawing.Point(12, 165);
+            this.ListBLocal.Name = "ListBLocal";
+            this.ListBLocal.Size = new System.Drawing.Size(168, 208);
+            this.ListBLocal.TabIndex = 13;
+            this.ListBLocal.Visible = false;
+            this.ListBLocal.SelectedIndexChanged += new System.EventHandler(this.ListBLocal_SelectedIndexChanged);
+            // 
+            // LblCancionesOnline
+            // 
+            this.LblCancionesOnline.AutoSize = true;
+            this.LblCancionesOnline.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCancionesOnline.ForeColor = System.Drawing.SystemColors.Control;
+            this.LblCancionesOnline.Location = new System.Drawing.Point(12, 146);
+            this.LblCancionesOnline.Name = "LblCancionesOnline";
+            this.LblCancionesOnline.Size = new System.Drawing.Size(120, 16);
+            this.LblCancionesOnline.TabIndex = 18;
+            this.LblCancionesOnline.Text = "Canciones Online";
+            this.LblCancionesOnline.Visible = false;
+            // 
+            // ListCancionesOnline
+            // 
+            this.ListCancionesOnline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.ListCancionesOnline.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListCancionesOnline.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListCancionesOnline.ForeColor = System.Drawing.Color.Silver;
+            this.ListCancionesOnline.FormattingEnabled = true;
+            this.ListCancionesOnline.ItemHeight = 16;
+            this.ListCancionesOnline.Location = new System.Drawing.Point(12, 165);
+            this.ListCancionesOnline.Name = "ListCancionesOnline";
+            this.ListCancionesOnline.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ListCancionesOnline.Size = new System.Drawing.Size(168, 256);
+            this.ListCancionesOnline.TabIndex = 17;
+            this.ListCancionesOnline.Visible = false;
+            this.ListCancionesOnline.SelectedIndexChanged += new System.EventHandler(this.ListCancionesOnline_SelectedIndexChanged);
+            // 
+            // BtnOnline
+            // 
+            this.BtnOnline.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtnOnline.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnOnline.FlatAppearance.BorderSize = 0;
+            this.BtnOnline.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnOnline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnOnline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnOnline.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnOnline.ForeColor = System.Drawing.Color.Silver;
+            this.BtnOnline.Image = global::MediaPlayer.Properties.Resources.icons8_nube_de_sonido_30;
+            this.BtnOnline.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnOnline.Location = new System.Drawing.Point(0, 90);
+            this.BtnOnline.Name = "BtnOnline";
+            this.BtnOnline.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnOnline.Size = new System.Drawing.Size(200, 45);
+            this.BtnOnline.TabIndex = 15;
+            this.BtnOnline.Text = "  Online";
+            this.BtnOnline.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnOnline.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnOnline.UseVisualStyleBackColor = true;
+            this.BtnOnline.Click += new System.EventHandler(this.BtnOnline_Click);
+            // 
+            // BtnAbrir
+            // 
+            this.BtnAbrir.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtnAbrir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnAbrir.FlatAppearance.BorderSize = 0;
+            this.BtnAbrir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnAbrir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnAbrir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAbrir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAbrir.ForeColor = System.Drawing.Color.Silver;
+            this.BtnAbrir.Image = global::MediaPlayer.Properties.Resources.icons8_biblioteca_de_música_30;
+            this.BtnAbrir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAbrir.Location = new System.Drawing.Point(0, 45);
+            this.BtnAbrir.Name = "BtnAbrir";
+            this.BtnAbrir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnAbrir.Size = new System.Drawing.Size(200, 45);
+            this.BtnAbrir.TabIndex = 13;
+            this.BtnAbrir.Text = " Abrir multimedia";
+            this.BtnAbrir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAbrir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAbrir.UseVisualStyleBackColor = true;
+            this.BtnAbrir.Click += new System.EventHandler(this.BtnAbrir_Click);
+            // 
+            // BtnInicio
+            // 
+            this.BtnInicio.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtnInicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnInicio.FlatAppearance.BorderSize = 0;
+            this.BtnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnInicio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnInicio.ForeColor = System.Drawing.Color.Silver;
+            this.BtnInicio.Image = global::MediaPlayer.Properties.Resources.icons8_casa_301;
+            this.BtnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnInicio.Location = new System.Drawing.Point(0, 0);
+            this.BtnInicio.Name = "BtnInicio";
+            this.BtnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnInicio.Size = new System.Drawing.Size(200, 45);
+            this.BtnInicio.TabIndex = 16;
+            this.BtnInicio.Text = "    Inicio";
+            this.BtnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnInicio.UseVisualStyleBackColor = true;
+            this.BtnInicio.Click += new System.EventHandler(this.BtnInicio_Click);
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtnSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BtnSalir.FlatAppearance.BorderSize = 0;
+            this.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.ForeColor = System.Drawing.Color.Silver;
+            this.BtnSalir.Image = global::MediaPlayer.Properties.Resources.exit;
+            this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSalir.Location = new System.Drawing.Point(0, 450);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BtnSalir.Size = new System.Drawing.Size(200, 45);
+            this.BtnSalir.TabIndex = 14;
+            this.BtnSalir.Text = " Salir";
+            this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
+            // BtnSonido
+            // 
+            this.BtnSonido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSonido.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_sonido_de_habitaciones_50;
+            this.BtnSonido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSonido.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.BtnSonido.FlatAppearance.BorderSize = 0;
+            this.BtnSonido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnSonido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnSonido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSonido.ForeColor = System.Drawing.Color.Silver;
+            this.BtnSonido.Location = new System.Drawing.Point(8, 24);
+            this.BtnSonido.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSonido.Name = "BtnSonido";
+            this.BtnSonido.Size = new System.Drawing.Size(23, 23);
+            this.BtnSonido.TabIndex = 12;
+            this.BtnSonido.UseVisualStyleBackColor = true;
+            this.BtnSonido.Click += new System.EventHandler(this.BtnSonido_Click);
+            // 
             // BtnSilencio
             // 
-            this.BtnSilencio.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_sound_64__1_;
+            this.BtnSilencio.BackgroundImage = global::MediaPlayer.Properties.Resources.icons8_sin_audio_50;
             this.BtnSilencio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSilencio.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.BtnSilencio.FlatAppearance.BorderSize = 0;
@@ -273,18 +448,6 @@ namespace MediaPlayer
             this.BtnSilencio.UseVisualStyleBackColor = true;
             this.BtnSilencio.Visible = false;
             this.BtnSilencio.Click += new System.EventHandler(this.BtnSilencio_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.BtnPause);
-            this.panel3.Controls.Add(this.BtnPlayOrPause);
-            this.panel3.Controls.Add(this.BtnBack);
-            this.panel3.Controls.Add(this.BtnNext);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(177, 66);
-            this.panel3.TabIndex = 14;
             // 
             // BtnPause
             // 
@@ -363,169 +526,6 @@ namespace MediaPlayer
             this.BtnNext.TabIndex = 4;
             this.BtnNext.UseVisualStyleBackColor = true;
             this.BtnNext.Click += new System.EventHandler(this.BtnNext_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.panel1.Controls.Add(this.LblCancionesLocales);
-            this.panel1.Controls.Add(this.ListBLocal);
-            this.panel1.Controls.Add(this.LblCancionesOnline);
-            this.panel1.Controls.Add(this.ListCancionesOnline);
-            this.panel1.Controls.Add(this.BtnOnline);
-            this.panel1.Controls.Add(this.BtnAbrir);
-            this.panel1.Controls.Add(this.BtnInicio);
-            this.panel1.Controls.Add(this.BtnSalir);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 495);
-            this.panel1.TabIndex = 12;
-            // 
-            // LblCancionesOnline
-            // 
-            this.LblCancionesOnline.AutoSize = true;
-            this.LblCancionesOnline.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCancionesOnline.ForeColor = System.Drawing.SystemColors.Control;
-            this.LblCancionesOnline.Location = new System.Drawing.Point(12, 146);
-            this.LblCancionesOnline.Name = "LblCancionesOnline";
-            this.LblCancionesOnline.Size = new System.Drawing.Size(120, 16);
-            this.LblCancionesOnline.TabIndex = 18;
-            this.LblCancionesOnline.Text = "Canciones Online";
-            this.LblCancionesOnline.Visible = false;
-            // 
-            // ListCancionesOnline
-            // 
-            this.ListCancionesOnline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.ListCancionesOnline.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ListCancionesOnline.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListCancionesOnline.ForeColor = System.Drawing.Color.Silver;
-            this.ListCancionesOnline.FormattingEnabled = true;
-            this.ListCancionesOnline.ItemHeight = 16;
-            this.ListCancionesOnline.Location = new System.Drawing.Point(12, 165);
-            this.ListCancionesOnline.Name = "ListCancionesOnline";
-            this.ListCancionesOnline.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ListCancionesOnline.Size = new System.Drawing.Size(168, 256);
-            this.ListCancionesOnline.TabIndex = 17;
-            this.ListCancionesOnline.Visible = false;
-            this.ListCancionesOnline.SelectedIndexChanged += new System.EventHandler(this.ListCancionesOnline_SelectedIndexChanged);
-            // 
-            // BtnOnline
-            // 
-            this.BtnOnline.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.BtnOnline.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnOnline.FlatAppearance.BorderSize = 0;
-            this.BtnOnline.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnOnline.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnOnline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnOnline.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnOnline.ForeColor = System.Drawing.Color.Silver;
-            this.BtnOnline.Image = global::MediaPlayer.Properties.Resources.icons8_descargar_desde_la_nube_301;
-            this.BtnOnline.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnOnline.Location = new System.Drawing.Point(0, 90);
-            this.BtnOnline.Name = "BtnOnline";
-            this.BtnOnline.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnOnline.Size = new System.Drawing.Size(200, 45);
-            this.BtnOnline.TabIndex = 15;
-            this.BtnOnline.Text = "  Online";
-            this.BtnOnline.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnOnline.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnOnline.UseVisualStyleBackColor = true;
-            this.BtnOnline.Click += new System.EventHandler(this.BtnOnline_Click);
-            // 
-            // BtnAbrir
-            // 
-            this.BtnAbrir.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.BtnAbrir.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnAbrir.FlatAppearance.BorderSize = 0;
-            this.BtnAbrir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnAbrir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnAbrir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAbrir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAbrir.ForeColor = System.Drawing.Color.Silver;
-            this.BtnAbrir.Image = global::MediaPlayer.Properties.Resources.colección;
-            this.BtnAbrir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAbrir.Location = new System.Drawing.Point(0, 45);
-            this.BtnAbrir.Name = "BtnAbrir";
-            this.BtnAbrir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnAbrir.Size = new System.Drawing.Size(200, 45);
-            this.BtnAbrir.TabIndex = 13;
-            this.BtnAbrir.Text = " Abrir multimedia";
-            this.BtnAbrir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnAbrir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnAbrir.UseVisualStyleBackColor = true;
-            this.BtnAbrir.Click += new System.EventHandler(this.BtnAbrir_Click);
-            // 
-            // BtnInicio
-            // 
-            this.BtnInicio.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.BtnInicio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnInicio.FlatAppearance.BorderSize = 0;
-            this.BtnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnInicio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnInicio.ForeColor = System.Drawing.Color.Silver;
-            this.BtnInicio.Image = global::MediaPlayer.Properties.Resources.icons8_casa_301;
-            this.BtnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnInicio.Location = new System.Drawing.Point(0, 0);
-            this.BtnInicio.Name = "BtnInicio";
-            this.BtnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnInicio.Size = new System.Drawing.Size(200, 45);
-            this.BtnInicio.TabIndex = 16;
-            this.BtnInicio.Text = "    Inicio";
-            this.BtnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnInicio.UseVisualStyleBackColor = true;
-            this.BtnInicio.Click += new System.EventHandler(this.BtnInicio_Click);
-            // 
-            // BtnSalir
-            // 
-            this.BtnSalir.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.BtnSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BtnSalir.FlatAppearance.BorderSize = 0;
-            this.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSalir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.ForeColor = System.Drawing.Color.Silver;
-            this.BtnSalir.Image = global::MediaPlayer.Properties.Resources.exit;
-            this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(0, 450);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnSalir.Size = new System.Drawing.Size(200, 45);
-            this.BtnSalir.TabIndex = 14;
-            this.BtnSalir.Text = " Salir";
-            this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnSalir.UseVisualStyleBackColor = true;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
-            // ListBLocal
-            // 
-            this.ListBLocal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.ListBLocal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ListBLocal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListBLocal.ForeColor = System.Drawing.Color.Silver;
-            this.ListBLocal.FormattingEnabled = true;
-            this.ListBLocal.ItemHeight = 16;
-            this.ListBLocal.Location = new System.Drawing.Point(12, 165);
-            this.ListBLocal.Name = "ListBLocal";
-            this.ListBLocal.Size = new System.Drawing.Size(168, 208);
-            this.ListBLocal.TabIndex = 13;
-            this.ListBLocal.Visible = false;
-            this.ListBLocal.SelectedIndexChanged += new System.EventHandler(this.ListBLocal_SelectedIndexChanged);
-            // 
-            // LblCancionesLocales
-            // 
-            this.LblCancionesLocales.AutoSize = true;
-            this.LblCancionesLocales.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCancionesLocales.ForeColor = System.Drawing.SystemColors.Control;
-            this.LblCancionesLocales.Location = new System.Drawing.Point(12, 146);
-            this.LblCancionesLocales.Name = "LblCancionesLocales";
-            this.LblCancionesLocales.Size = new System.Drawing.Size(127, 16);
-            this.LblCancionesLocales.TabIndex = 19;
-            this.LblCancionesLocales.Text = "Canciones Locales";
-            this.LblCancionesLocales.Visible = false;
             // 
             // Form1
             // 
