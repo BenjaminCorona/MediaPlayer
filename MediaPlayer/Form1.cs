@@ -316,7 +316,12 @@ namespace MediaPlayer
 
             //Agregando el nombre de la cancion a la interfaz
             nombreCancion = rutasArchivosMP3[ListBLocal.SelectedIndex].ToString();
-            LblNombreCanción.Text = nombreCancion;
+
+            //El formateo de estas canciones funciona sólo en la ruta del usuario que lo programó
+            string SinRuta = nombreCancion.Replace(@"C:\Users\benja\Deezloader Music\", string.Empty);
+            string NombreSinExt = SinRuta.Replace(".mp3", string.Empty);
+            LblNombreCanción.Text = NombreSinExt;
+            
 
             try
             {
@@ -338,11 +343,6 @@ namespace MediaPlayer
 
                 timer1.Start();
             }
-        }
-
-        private void LblEsconder_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void LblOcultar_Click(object sender, EventArgs e)
