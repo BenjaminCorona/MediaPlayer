@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace MediaPlayer
 {
@@ -58,6 +59,8 @@ namespace MediaPlayer
             LblActual.Location = new Point((panel6.Width - LblActual.Width) / 2, LblActual.Location.Y);
             LblTotal.Location = new Point((panel7.Width - LblTotal.Width) / 2, LblTotal.Location.Y);
 
+            pic_art.Location = new Point((panelalbum.Width - pic_art.Width) / 2, pic_art.Location.Y);
+
 
         }
 
@@ -66,6 +69,8 @@ namespace MediaPlayer
             macTrackBarMusic.Location = new Point((panel8.Width - macTrackBarMusic.Width) / 2, macTrackBarMusic.Location.Y);
             LblActual.Location = new Point((panel6.Width - LblActual.Width) / 2, LblActual.Location.Y);
             LblTotal.Location = new Point((panel7.Width - LblTotal.Width) / 2, LblTotal.Location.Y);
+
+            pic_art.Location = new Point((panelalbum.Width - pic_art.Width) / 2, pic_art.Location.Y);
 
         }
 
@@ -153,22 +158,6 @@ namespace MediaPlayer
 
         private void BtnInicio_Click(object sender, EventArgs e)
         {
-            if (PanelAnuncio.Visible == false)
-            {
-                PanelAnuncio.Visible = true;
-                PanelArtistas.Visible = true;
-                pictureAnuncio.Visible = true;
-            }
-            else
-            {
-                PanelAnuncio.Visible = false;
-                PanelArtistas.Visible = false;
-                pictureAnuncio.Visible = false;
-            }
-
-
-            
-            
         }
 
         private void BtnOnline_Click(object sender, EventArgs e)
@@ -329,6 +318,13 @@ namespace MediaPlayer
             nombreCancion = rutasArchivosMP3[ListBLocal.SelectedIndex].ToString();
             LblNombreCanción.Text = nombreCancion;
 
+            try
+            {
+                var file = TagLib.File.Create(rutasArchivosMP3[ListBLocal.SelectedIndex]);
+                var bin = (byte[])(file.Tag.Pictures[0].Data.Data);
+                pic_art.Image = Image.FromStream(new MemoryStream(bin));
+            }
+            catch { }
 
             if (!(ruta == ""))
             {
@@ -341,6 +337,25 @@ namespace MediaPlayer
                 BtnPlayOrPause.Visible = false;
 
                 timer1.Start();
+            }
+        }
+
+        private void LblEsconder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblOcultar_Click(object sender, EventArgs e)
+        {
+            if (panelalbum.Visible == false)
+            {
+                panelalbum.Visible = true;
+                pic_art.Visible = true;
+            }
+            else
+            {
+                panelalbum.Visible = false;
+                pic_art.Visible = false;
             }
         }
     }
